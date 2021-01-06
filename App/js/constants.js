@@ -1,1 +1,1 @@
-var include_path = $('base').attr('base');
+const include_path = $('base').attr('base')

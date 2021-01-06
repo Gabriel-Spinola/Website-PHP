@@ -62,6 +62,7 @@
 
 			<h3><i class="fa fa-address-book-o" aria-hidden="true"></i></h3>
 			<h4>CSS3</h4>
+
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
 
 		</article><!--box-especialidade-->
@@ -70,6 +71,7 @@
 
 			<h3><i class="fa fa-html5"></i></h3>
 			<h4>HTML 5</h4>
+
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
 
 		</article><!--box-especialidade-->
@@ -78,6 +80,7 @@
 
 			<h3><i class="fa fa-gg-circle"></i></h3>
 			<h4>Javascript</h4>
+			
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
 
 		</article><!--box-especialidade-->
@@ -106,10 +109,8 @@
 
 			<article class="depoimento-single">
 
-				<p class="depoimento-descricao">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-				</p>
+				<p class="depoimento-descricao">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+
 				<p class="nome-autor">Lorem ipsum</p>
 
 			</article><!--depoimento-single-->
