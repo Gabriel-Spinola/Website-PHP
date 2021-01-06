@@ -1,4 +1,5 @@
-*{
+*
+{
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -7,74 +8,88 @@
 
 /**Boot CSS**/
 
-html,body{
+html, body
+{
 	height: 100%;
 }
 
 
-img{
+img
+{
 	width: 100%;
 	max-width: 400px;
 }
 
-.center{
+.center
+{
 	max-width: 1280px;
 	padding:0 2%;
 	margin:0 auto;
 }
 
-.w33{
+.w33
+{
 	width: 33.3%;
 	padding: 0 10px;
 }
 
-.w50{
+.w50
+{
 	padding:0 10px;
 	width: 50%;
 }
 
-.left{
+.left
+{
 	float: left;
 }
 
-.right{
+.right
+{
 	float: right;
 }
 
-.clear{
+.clear
+{
 	clear: both;
 }
 
 
 /**Estilização do site**/
 
-header{
+header
+{
 	padding:20px 0;
 	background: #3D437A;
 }
 
-header .logo{
+header .logo
+{
 	font-size: 25px;
 	font-weight: 300;
 	text-transform: uppercase;
 }
 
-.logo a{
+.logo a
+{
 	text-decoration: none;
 	color: white;
 }
 
-.mobile{
+.mobile
+{
 	display: none;
 }
 
-nav.desktop ul{
+nav.desktop ul
+{
 	position: relative;
 	top:6px;
 	list-style-type: none;
 }
 
-nav.desktop li{
+nav.desktop li
+{
 	font-weight: 300;
 	font-size: 15px;
 	padding:0 30px;
@@ -82,22 +97,26 @@ nav.desktop li{
 	display: inline-block;
 }
 
-nav.desktop a{
+nav.desktop a
+{
 	color: white;
 	text-decoration: none;
 }
 
-nav.desktop a:hover{
+nav.desktop a:hover
+{
 	text-decoration: underline;
 }
 
-section.banner-container{
+section.banner-container
+{
 	width: 100%;
 	height: 600px;
 	position: relative;
 }
 
-.banner-single{
+.banner-single
+{
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -109,7 +128,8 @@ section.banner-container{
 	background-position: center;
 }
 
-section.banner-container form{
+section.banner-container form
+{
 	width: 93%;
 	max-width: 600px;
 	z-index: 3;
@@ -120,14 +140,16 @@ section.banner-container form{
 	-ms-transform:translate(-50%,-50%);
 }
 
-section.banner-container form h2{
+section.banner-container form h2
+{
 	color: white;
 	font-weight: 300;
 	font-size: 30px;
 	text-align: center;
 }
 
-section.banner-container form input[type=email]{
+section.banner-container form input[type=email]
+{
 	width: 100%;
 	height: 66px;
 	margin-top:10px;
@@ -137,7 +159,8 @@ section.banner-container form input[type=email]{
 	padding-left: 10px;
 }
 
-section.banner-container form input[type=submit]{
+section.banner-container form input[type=submit]
+{
 	width: 100%;
 	height: 66px;
 	margin-top:10px;
@@ -148,116 +171,136 @@ section.banner-container form input[type=submit]{
 	border: 0;
 }
 
-section.descricao-autor{
+section.descricao-autor
+{
 	padding:40px 0;
 }
 
-section.descricao-autor h2{
+section.descricao-autor h2
+{
 	font-size: 28px;
 	font-weight: 300;
 	color: #444;
 }
 
-section.descricao-autor p{
+section.descricao-autor p
+{
 	font-size: 16px;
 	color: #444;
 	font-weight: 300;
 	margin-top:10px;
 }
 
-section.especialidades{
+section.especialidades
+{
 	padding: 40px 0;
 	background: #E2E2E2;
 }
 
-section.especialidades h2.title{
+section.especialidades h2.title
+{
 	font-size: 30px;
 	text-align: center;
 	font-weight: 400;
 	color: #999;
 }
 
-.box-especialidade{
+.box-especialidade
+{
 	margin:40px 0;
 	padding: 0 30px;
 	text-align: center;
 }
 
-.box-especialidade h3{
+.box-especialidade h3
+{
 	color: #404580;
 	font-size: 40px;
 }
 
-.box-especialidade h4{
+.box-especialidade h4
+{
 	font-weight: 300;
 	font-size: 25px;
 	color: #BABABA;
 }
 
-.box-especialidade p{
+.box-especialidade p
+{
 	color: #444;
 	font-size: 15px;
 	margin-top: 10px;
 }
 
-section.extras{
+section.extras
+{
 	padding: 30px 0;
 	background: #404580;
 }
 
-.servicos-container,.depoimentos-container{
+.servicos-container,.depoimentos-container
+{
 	padding: 0 50px;
 }
 
-section.extras .title{
+section.extras .title
+{
 	color: white;
 	font-weight: 300;
 	font-size: 25px;
 	margin-bottom: 15px;
 }
 
-.depoimento-single{
+.depoimento-single
+{
 	padding:15px 0;
 	border-bottom: 1px solid #5056A0;
 }
 
-p.depoimento-descricao{
+p.depoimento-descricao
+{
 	font-size: 15px;
 	color: white;
 	font-weight: 300;
 }
 
-p.nome-autor{
+p.nome-autor
+{
 	font-size: 15px;
 	color: white;
 	margin-top:5px;
 	font-weight:bold;
 }
 
-.servicos ul{
+.servicos ul
+{
 	margin:20px 0;
 	
 }
 
-.servicos li{
+.servicos li
+{
 	margin-bottom: 15px;
 	font-size: 15px;
 	color: white;
 	font-weight: 300;
 }
 
-footer{
+footer
+{
 	background: #313462;
 	padding: 30px 0;
 }
 
-footer.fixed{
+footer.fixed
+{
 	position: fixed;
 	bottom: 0;
 	width: 100%;
 }
 
-footer p{
+footer p
+{
 	color: white;
 	text-align: center;
 	font-weight:400;
@@ -268,10 +311,12 @@ footer p{
 Para arrumar scroll-x do IE e EDGE.
 */
 
-body{
+body
+{
 	overflow-x: hidden;
 }
-section.erro-404 h2{
+section.erro-404 h2
+{
 	text-align: center;
 	color: #444;
 	font-weight: 400;
@@ -279,7 +324,8 @@ section.erro-404 h2{
 	border-top: 2px solid #444;
 }
 
-section.erro-404 p{
+section.erro-404 p
+{
 	margin-top:8px;
 	text-align: center;
 	font-size: 16px;
@@ -287,11 +333,13 @@ section.erro-404 p{
 	font-weight: 300;
 }
 
-section.erro-404 a{
+section.erro-404 a
+{
 	color: #444;
 }
 
-.wraper-404{
+.wrapper-404
+{
 	transform:translate(-50%,-50%);
 	-ms-transform:translate(-50%,-50%);
 	width: 100%;
@@ -303,17 +351,20 @@ section.erro-404 a{
 	top: 50%;
 }
 
-#map{
+#map
+{
 	width: 100%;
 	height: 400px;
 }
 
-.contato-container{
+.contato-container
+{
 	padding:40px 0;
 	text-align: center;
 }
 
-.contato-container input[type=text]{
+.contato-container input[type=text]
+{
 	margin:8px 0;
 	width: 100%;
 	height: 40px;
@@ -324,7 +375,8 @@ section.erro-404 a{
 	color: #444;
 }
 
-.contato-container textarea{
+.contato-container textarea
+{
 	padding: 8px;
 	margin:8px 0;
 	width: 100%;
@@ -337,7 +389,8 @@ section.erro-404 a{
 	color: #444;
 }
 
-.contato-container input[type=submit]{
+.contato-container input[type=submit]
+{
 	background: #00C59E;
 	width: 140px;
 	height: 40px;
@@ -345,7 +398,8 @@ section.erro-404 a{
 	cursor: pointer;
 }
 
-.bullets{
+.bullets
+{
 	position: absolute;
 	bottom: 10px;
 	left: 50%;
@@ -353,7 +407,8 @@ section.erro-404 a{
 	z-index: 5;
 }
 
-.bullets span{
+.bullets span
+{
 	margin:0 10px;
 	display: inline-block;
 	width: 16px;
@@ -363,47 +418,50 @@ section.erro-404 a{
 	background-color: #444;
 }
 
-.bullets span.active-slider{
+.bullets span.active-slider
+{
 	background: white;
 }
 
-@media screen and (max-width: 768px){
-	img{
+@media screen and (max-width: 768px)
+{
+	img {
 		float: none !important;
 		display: block;
 		margin:0 auto;
 	}
 
-	.w50{
+	.w50 {
 		padding:20px;
 		width: 100%;
 	}
 
-	.w33{
+	.w33 {
 		width: 100%;
 		padding: 20px;
 	}
 	
-	.box-especialidade{
+	.box-especialidade {
 		padding:40px 20px;
 		margin: 0;
 	}
 }
 
-@media screen and (max-width: 700px){
-	nav.desktop{
+@media screen and (max-width: 700px)
+{
+	nav.desktop {
 		display: none;
 	}
 
-	nav.mobile{
+	nav.mobile {
 		display: block;
 	}
-	.botao-menu-mobile{
+	.botao-menu-mobile {
 		font-size: 24px;
 		cursor: pointer;
 		color: white;
 	}
-	nav.mobile ul{
+	nav.mobile ul {
 		top:55px;
 		z-index: 3;
 		position: absolute;
@@ -412,7 +470,7 @@ section.erro-404 a{
 		display: none;
 		text-align: center;
 	}
-	nav.mobile li{
+	nav.mobile li {
 		font-weight: 300;
 		width: 100%;
 		display: block;
@@ -421,7 +479,7 @@ section.erro-404 a{
 		font-size: 17px;
 		padding:8px 0;
 	}
-	nav.mobile li a{
+	nav.mobile li a {
 		display: block;
 		color: #444;
 		text-decoration: none;

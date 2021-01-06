@@ -1,4 +1,5 @@
 <?php 
-	define('INCLUDE_PATH','http://localhost/projeto1-03-site-dinamico/');
-
+	
+	const INCLUDE_PATH = "http://localhost:7000/GitHub/Comercial-Site-With-PHP/App/";
+	
 ?>
