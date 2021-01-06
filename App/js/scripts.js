@@ -1,26 +1,26 @@
+/*
+	|-- Abrir menu através do fadein
+	| if (listaMenu.is(':hidden')){
+	|	listaMenu.fadeIn()
+	| }
+	| else {
+	|	listaMenu.fadeOut()
+	| }
+	|
+	|-- Abrir ou fechar sem efeitos
+	| if(listaMenu.is(':hidden')){
+	|	//listaMenu.show()
+	|	listaMenu.css('display', 'block')
+	| }
+	| else{
+	|	//listaMenu.hide()
+	|	listaMenu.css('display', 'none')
+	| }
+*/
+
 $(function () {
 	$('nav.mobile').click(() => {
 		var listaMenu = $('nav.mobile ul')
-
-		/*
-		|-- Abrir menu através do fadein
-		| if (listaMenu.is(':hidden')){
-		|	listaMenu.fadeIn()
-		| }
-		| else {
-		|	listaMenu.fadeOut()
-		| }
-		|
-		|-- Abrir ou fechar sem efeitos
-		| if(listaMenu.is(':hidden')){
-		|	//listaMenu.show()
-		|	listaMenu.css('display', 'block')
-		| }
-		| else{
-		|	//listaMenu.hide()
-		|	listaMenu.css('display', 'none')
-		| }
-		*/
 
 		if (listaMenu.is(':hidden')) {
 			//fa fa-times
@@ -58,11 +58,11 @@ $(function () {
 	carregarDinamico()
 
 	function carregarDinamico() {
-		$('[realtime]').click(() => {
+		$('#realtime').click(() => {
 			var pagina = $(this).attr('realtime')
 
 			$('.container-principal').hide()
-			$('.container-principal').load(include_path + 'pages/' + pagina + '.php')
+			$('.container-principal').load(include_path + 'Pages/' + pagina + '.php')
 			
 			setTimeout(() => {
 				initialize()

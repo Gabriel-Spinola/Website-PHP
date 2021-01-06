@@ -61,7 +61,7 @@
 					<li><a href="<?php echo INCLUDE_PATH ?>">Home</a></li>
 					<li><a href="<?php echo INCLUDE_PATH ?>depoimentos">Depoimentos</a></li>
 					<li><a href="<?php echo INCLUDE_PATH ?>servicos">Serviços</a></li>
-					<li><a realtime="contato" href="<?php echo INCLUDE_PATH ?>contato">Contato</a></li>
+					<li><a id="realtime" href="<?php echo INCLUDE_PATH ?>contato">Contato</a></li>
 
 				</ul>
 
@@ -112,7 +112,7 @@
 
 	</main><!--container-principal-->
 
-	<footer <?php if( (isset($pagina404)) and ($pagina404 == true) ) echo 'class="fixed"' ?> >
+	<footer <?php if( (isset($pagina404)) and ($pagina404) ) echo 'class="fixed"' ?> >
 
 		<div class="center">
 
@@ -123,15 +123,15 @@
 	</footer><!--?fixed or null?-->
 
 	<script src="<?php echo INCLUDE_PATH ?>Assets/jquery.js"></script>
-	<script src="<?php echo INCLUDE_PATH ?>js/constants.js"></script>
-	<script src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyDHPNQxozOzQSZ-djvWGOBUsHkBUoT_qH4'></script>
-	<script src="<?php echo INCLUDE_PATH ?>js/map.js"></script>
 	<script src="<?php echo INCLUDE_PATH ?>js/scripts.js"></script>
-
-	<?php if( ($url == 'home') or ($url == '') or ($url == 'depoimentos') ): ?>
+	<script src="<?php echo INCLUDE_PATH ?>js/map.js"></script>
+	<script src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyDHPNQxozOzQSZ-djvWGOBUsHkBUoT_qH4'></script>
+	<script src="<?php echo INCLUDE_PATH ?>js/constants.js"></script>
+	
+	<?php if( ($url == 'home') or ($url == '') or ($url == 'depoimentos') or ($url == 'servicos') ): ?>
 
 		<script src="<?php echo INCLUDE_PATH ?>js/slider.js"></script>
-
+		
 	<?php endif ?>
 
 	<script src="<?php echo INCLUDE_PATH ?>js/exemplo.js"></script>

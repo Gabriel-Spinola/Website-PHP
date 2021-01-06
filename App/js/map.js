@@ -1,20 +1,22 @@
+// Made by Guilherme Grillo
+
 var map
 
 function initialize() {
 
-  var mapProp = {
-	center: new google.maps.LatLng(-27.609959,-48.576585),
-	zoom: 14,
-	scrollwheel: false,
-	styles: [{
-		stylers: [{
-			saturation: -100
-		}]
-	}],
-	mapTypeId: google.maps.MapTypeId.ROADMAP
-  }
-  
-  map = new google.maps.Map(document.getElementById("map"), mapProp)
+	var mapProp = {
+		center: new google.maps.LatLng(-27.609959,-48.576585),
+		zoom: 14,
+		scrollwheel: false,
+		styles: [{
+			stylers: [{
+				saturation: -100
+			}]
+		}],
+		mapTypeId: google.maps.MapTypeId.ROADMAP
+	}
+	
+	map = new google.maps.Map(document.getElementById("map"), mapProp)
 }
 
 function addMarker(lat, long, icon, content, showInfoWindow, openInfoWindow){
@@ -69,12 +71,12 @@ function addMarker(lat, long, icon, content, showInfoWindow, openInfoWindow){
 		})
 
 		// Moves the shadow of the arrow 76px to the left margin 
-		iwBackground.children(':nth-child(1)').attr('style', (i,s) => {
+		iwBackground.children(':nth-child(1)').attr('style', (i, s) => {
 			return s + 'display:none'
 		})
 
 		// Moves the arrow 76px to the left margin 
-		iwBackground.children(':nth-child(3)').attr('style', (i,s) => {
+		iwBackground.children(':nth-child(3)').attr('style', (i, s) => {
 			return s + 'display:none'
 		})
 	})

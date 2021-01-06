@@ -2,7 +2,7 @@ $(function () {
 	let atual = -1
 	let maximo = $('.box-especialidade').length - 1
 	let timer
-	let animacaoDelay = 3
+	let animacaoDelay = 1
 
 	executarAnimacao()
 
@@ -22,6 +22,5 @@ $(function () {
 
 			$('.box-especialidade').eq(atual).fadeIn()
 		}
-
 	}
 })
