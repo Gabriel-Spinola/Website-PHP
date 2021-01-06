@@ -13,7 +13,6 @@ html, body
 	height: 100%;
 }
 
-
 img
 {
 	width: 100%;
@@ -53,7 +52,6 @@ img
 {
 	clear: both;
 }
-
 
 /**Estilização do site**/
 
@@ -148,7 +146,7 @@ section.banner-container form h2
 	text-align: center;
 }
 
-section.banner-container form input[type=email]
+section.banner-container form input[ type = email ]
 {
 	width: 100%;
 	height: 66px;
@@ -159,7 +157,7 @@ section.banner-container form input[type=email]
 	padding-left: 10px;
 }
 
-section.banner-container form input[type=submit]
+section.banner-container form input[ type = submit ]
 {
 	width: 100%;
 	height: 66px;
@@ -313,6 +311,7 @@ body
 {
 	overflow-x: hidden;
 }
+
 section.erro-404 h2
 {
 	text-align: center;
@@ -361,7 +360,7 @@ section.erro-404 a
 	text-align: center;
 }
 
-.contato-container input[type=text]
+.contato-container input[ type = text ]
 {
 	margin:8px 0;
 	width: 100%;
@@ -387,7 +386,7 @@ section.erro-404 a
 	color: #444;
 }
 
-.contato-container input[type=submit]
+.contato-container input[ type = submit ]
 {
 	background: #00C59E;
 	width: 140px;

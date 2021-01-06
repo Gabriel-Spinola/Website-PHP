@@ -128,7 +128,7 @@
 	<script src="<?php echo INCLUDE_PATH ?>js/map.js"></script>
 	<script src="<?php echo INCLUDE_PATH ?>js/scripts.js"></script>
 
-	<?php if( ($url == 'home') or ($url == '') ): ?>
+	<?php if( ($url == 'home') or ($url == '') or ($url == 'depoimentos') ): ?>
 
 		<script src="<?php echo INCLUDE_PATH ?>js/slider.js"></script>
 

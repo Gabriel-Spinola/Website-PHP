@@ -1,34 +1,32 @@
-$(function(){
+$(function () {
 	$('nav.mobile').click(() => {
 		var listaMenu = $('nav.mobile ul')
 
-		//Abrir menu através do fadein
 		/*
-		if(listaMenu.is(':hidden') == true){
-			listaMenu.fadeIn()
-		}
-		else{
-			listaMenu.fadeOut()
-		}
-		*/
-
-		//Abrir ou fechar sem efeitos
-		/*
-		
-		if(listaMenu.is(':hidden') == true){
-			//listaMenu.show()
-			listaMenu.css('display','block')
-		}
-		else{
-			//listaMenu.hide()
-			listaMenu.css('display','none')
-		}
+		|-- Abrir menu através do fadein
+		| if (listaMenu.is(':hidden')){
+		|	listaMenu.fadeIn()
+		| }
+		| else {
+		|	listaMenu.fadeOut()
+		| }
+		|
+		|-- Abrir ou fechar sem efeitos
+		| if(listaMenu.is(':hidden')){
+		|	//listaMenu.show()
+		|	listaMenu.css('display', 'block')
+		| }
+		| else{
+		|	//listaMenu.hide()
+		|	listaMenu.css('display', 'none')
+		| }
 		*/
 
 		if (listaMenu.is(':hidden')) {
 			//fa fa-times
 			//fa fa-bars
 			//var icone =  $('.botao-menu-mobile i')
+
 			var icone = $('.botao-menu-mobile').find('i')
 
 			icone.removeClass('fa-bars')
@@ -48,7 +46,7 @@ $(function(){
 
 	if ($('target').length > 0){
 		//O elemento existe, portanto precisamos dar o scroll em algum elemento.
-		var elemento = '#'+$('target').attr('target')
+		var elemento = '#' + $('target').attr('target')
 
 		var divScroll = $(elemento).offset().top
 
@@ -70,11 +68,11 @@ $(function(){
 				initialize()
 				addMarker(-27.609959, -48.576585, '', "Minha casa", undefined, false)
 
-			},1000)
+			}, 1000)
 
 			$('.container-principal').fadeIn(1000)
 
-			window.history.pushState('', '',pagina)
+			window.history.pushState('', '', pagina)
 
 			return false
 		})

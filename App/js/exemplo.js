@@ -1,16 +1,15 @@
 $(function () {
-	
-	var atual = -1
-	var maximo = $('.box-especialidade').length - 1
-	var timer
-	var animacaoDelay = 3
+	let atual = -1
+	let maximo = $('.box-especialidade').length - 1
+	let timer
+	let animacaoDelay = 3
 
 	executarAnimacao()
 
 	function executarAnimacao() {
 		$('.box-especialidade').hide()
 
-		timer = setInterval(logicaAnimacao,animacaoDelay * 1000)
+		timer = setInterval(logicaAnimacao, animacaoDelay * 1000)
 
 		function logicaAnimacao() {
 			atual++
@@ -25,5 +24,4 @@ $(function () {
 		}
 
 	}
-
 })

@@ -1,17 +1,17 @@
-$(function(){
+$(function () {
 
-	var curSlide = 0
-	var maxSlide = $('.banner-single').length - 1
-	var delay = 3
+	let curSlide = 0
+	let maxSlide = $('.banner-single').length - 1
+	let delay = 3
 
 	initSlider()
 	changeSlide()
 
 	function initSlider() {
-		$('.banner-single').css('opacity','0')
-		$('.banner-single').eq(0).css('opacity','1')
+		$('.banner-single').css('opacity', '0')
+		$('.banner-single').eq(0).css('opacity', '1')
 		
-		for (let i in maxSlide + 1 /*var i = 0; i < maxSlide + 1; i++*/) {
+		for (let i in maxSlide + 1) {
 			var content = $('.bullets').html()
 
 			if (i == 0)
@@ -35,7 +35,7 @@ $(function(){
 				curSlide = 0
 
 			$('.banner-single').eq(curSlide).animate({
-				'opacity':'1'
+				'opacity': '1'
 			}, 2000)
 
 			//Trocar bullets da navegacao do slider!
@@ -44,23 +44,21 @@ $(function(){
 		}, delay * 1000)
 	}
 
-
 	$('body').on('click', '.bullets span', () => {
 		var currentBullet = $(this)
 
 		$('.banner-single').eq(curSlide).animate({
-			'opacity':'0'
+			'opacity': '0'
 		}, 2000)
 
 		curSlide = currentBullet.index()
 		
 		$('.banner-single').eq(curSlide).animate({
-			'opacity':'1'
+			'opacity': '1'
 		}, 2000)
 
 		$('.bullets span').removeClass('active-slider')
 
 		currentBullet.addClass('active-slider')
 	})
-
 })
