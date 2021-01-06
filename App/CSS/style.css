@@ -307,9 +307,7 @@ footer p
 	font-size: 16px;
 }
 
-/*
-Para arrumar scroll-x do IE e EDGE.
-*/
+/**Para arrumar scroll-x do IE e EDGE.**/
 
 body
 {
@@ -456,11 +454,13 @@ section.erro-404 a
 	nav.mobile {
 		display: block;
 	}
+	
 	.botao-menu-mobile {
 		font-size: 24px;
 		cursor: pointer;
 		color: white;
 	}
+
 	nav.mobile ul {
 		top:55px;
 		z-index: 3;
@@ -470,6 +470,7 @@ section.erro-404 a
 		display: none;
 		text-align: center;
 	}
+
 	nav.mobile li {
 		font-weight: 300;
 		width: 100%;
@@ -479,6 +480,7 @@ section.erro-404 a
 		font-size: 17px;
 		padding:8px 0;
 	}
+
 	nav.mobile li a {
 		display: block;
 		color: #444;
