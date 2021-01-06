@@ -61,7 +61,7 @@
 					<li><a href="<?php echo INCLUDE_PATH ?>">Home</a></li>
 					<li><a href="<?php echo INCLUDE_PATH ?>depoimentos">Depoimentos</a></li>
 					<li><a href="<?php echo INCLUDE_PATH ?>servicos">Serviços</a></li>
-					<li><a id="realtime" href="<?php echo INCLUDE_PATH ?>contato">Contato</a></li>
+					<li><a href="<?php echo INCLUDE_PATH ?>contato">Contato</a></li>
 
 				</ul>
 
@@ -80,7 +80,7 @@
 					<li><a href="<?php echo INCLUDE_PATH ?>">Home</a></li>
 					<li><a href="<?php echo INCLUDE_PATH ?>depoimentos">Depoimentos</a></li>
 					<li><a href="<?php echo INCLUDE_PATH ?>servicos">Serviços</a></li>
-					<li><a realtime="contato" href="<?php echo INCLUDE_PATH ?>contato">Contato</a></li>
+					<li><a href="<?php echo INCLUDE_PATH ?>contato">Contato</a></li>
 
 				</ul>
 
@@ -112,11 +112,12 @@
 
 	</main><!--container-principal-->
 
-	<footer <?php if( (isset($pagina404)) and ($pagina404) ) echo 'class="fixed"' ?> >
+	<footer <?php if( (isset($pagina404)) and ($pagina404) ) echo 'class="fixed"';
+	elseif($url == 'contato') echo 'class="down-footer"'; ?> >
 
 		<div class="center">
 
-			<p>Todos os direitos reservados</p>
+			<p>Todos os direitos reservados &copy;</p>
 
 		</div><!--center-->
 
@@ -124,17 +125,20 @@
 
 	<script src="<?php echo INCLUDE_PATH ?>Assets/jquery.js"></script>
 	<script src="<?php echo INCLUDE_PATH ?>js/scripts.js"></script>
-	<script src="<?php echo INCLUDE_PATH ?>js/map.js"></script>
-	<script src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyDHPNQxozOzQSZ-djvWGOBUsHkBUoT_qH4'></script>
 	<script src="<?php echo INCLUDE_PATH ?>js/constants.js"></script>
 	
 	<?php if( ($url == 'home') or ($url == '') or ($url == 'depoimentos') or ($url == 'servicos') ): ?>
 
 		<script src="<?php echo INCLUDE_PATH ?>js/slider.js"></script>
-		
-	<?php endif ?>
+		<script src="<?php echo INCLUDE_PATH ?>js/exemplo.js"></script>
+	
+	<?php else: ?>
 
-	<script src="<?php echo INCLUDE_PATH ?>js/exemplo.js"></script>
+		<script src="<?php echo INCLUDE_PATH ?>js/map.js"></script>
+		<script src="<?php echo INCLUDE_PATH ?>js/dynamicLoad.js"></script>
+		<script src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyDHPNQxozOzQSZ-djvWGOBUsHkBUoT_qH4'></script>
+
+	<?php endif ?>
 
 </body>
 

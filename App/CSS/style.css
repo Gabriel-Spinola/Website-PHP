@@ -251,7 +251,7 @@ section.extras .title
 
 .depoimento-single
 {
-	padding:15px 0;
+	padding: 15px 0;
 	border-bottom: 1px solid #5056A0;
 }
 
@@ -418,6 +418,11 @@ section.erro-404 a
 .bullets span.active-slider
 {
 	background: white;
+}
+
+footer.down-footer
+{
+	margin-top: 57.5px;
 }
 
 @media screen and (max-width: 768px)

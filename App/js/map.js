@@ -72,12 +72,12 @@ function addMarker(lat, long, icon, content, showInfoWindow, openInfoWindow){
 
 		// Moves the shadow of the arrow 76px to the left margin 
 		iwBackground.children(':nth-child(1)').attr('style', (i, s) => {
-			return s + 'display:none'
+			return s + 'display: none'
 		})
 
 		// Moves the arrow 76px to the left margin 
 		iwBackground.children(':nth-child(3)').attr('style', (i, s) => {
-			return s + 'display:none'
+			return s + 'display: none'
 		})
 	})
 
