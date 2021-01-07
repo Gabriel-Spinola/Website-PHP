@@ -12,14 +12,14 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="keywords" content="keywords">
-	<meta name="description" content="Descrição do meu website">
+	<meta name="description" content="Your site description">
 
 	<title>Comercial Site With PHP</title>
 
-	<link rel="stylesheet" href="Assets/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
 	<link rel="icon" href="<?php echo INCLUDE_PATH ?>favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="<?php echo INCLUDE_PATH ?>CSS/style.css">
+	<link rel="stylesheet" href="<?php echo INCLUDE_PATH ?>Assets/styles/fontawesome.min.css">
 
 </head>
 
@@ -49,7 +49,7 @@
 
 			<div class="logo left">
 
-				<a href="<?php echo INCLUDE_PATH ?>">Logomarca</a>
+				<a href="<?php echo INCLUDE_PATH ?>">Logo</a>
 
 			</div><!--logo-->
 

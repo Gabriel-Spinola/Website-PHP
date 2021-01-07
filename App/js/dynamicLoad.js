@@ -5,7 +5,7 @@ $(function () {
         
         setTimeout(() => {
             initialize()
-            addMarker(-27.609959, -48.576585, '', "Minha casa", undefined, false)
+            addMarker(-27.609959, -48.576585, '', "Sample", undefined, false)
         }, 1000)
 
         $('.principal-container').fadeIn(750)

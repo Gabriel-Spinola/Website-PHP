@@ -42,11 +42,11 @@
 
 		<div class="w50 left">
 
-			<img class="right" src="<?php echo INCLUDE_PATH; ?>images/foto.jpg">
+			<img class="right" src="<?php echo INCLUDE_PATH ?>images/foto.jpg">
 
 		</div><!--w50 left-->
 
-		<div class="clear"></div>
+		<div class="clear"></div><!--clear-->
 
 	</div><!--center-->
 
@@ -69,7 +69,7 @@
 
 		<article class="w33 left specialtie-box">
 
-			<h3><i class="fa fa-html5"></i></h3>
+			<h3><i class="fab fa-html5"></i></h3>
 			<h4>HTML 5</h4>
 
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
@@ -85,7 +85,7 @@
 
 		</article><!--specialtie-box-->
 
-		<div class="clear"></div>
+		<div class="clear"></div><!--clear-->
 
 	</div><!--center-->
 
@@ -146,7 +146,7 @@
 
 		</div><!--w50 left services-container-->
 
-		<div class="clear"></div>
+		<div class="clear"></div><!--clear-->
 
 	</div><!--center-->
 
