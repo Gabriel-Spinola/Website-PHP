@@ -45,7 +45,7 @@ $(function () {
 	})
 
 	if ($('target').length > 0){
-		// the element exists, so we need scroll to a nelement.
+		// the element exists, so we need scroll to an element.
 		var elemento = `#${ $('target').attr('target') }`
 
 		var divScroll = $(elemento).offset().top
