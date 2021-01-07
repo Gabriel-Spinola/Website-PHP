@@ -118,7 +118,7 @@
 
 		<div class="center">
 
-			<p>Todos os direitos reservados &copy;</p>
+			<p>All rights reserved &copy;</p>
 
 		</div><!--center-->
 
