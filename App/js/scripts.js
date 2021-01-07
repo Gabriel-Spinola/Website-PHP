@@ -1,5 +1,5 @@
 /*
-	|-- Abrir menu através do fadein
+	|-- Open menu with fadein
 	| if (menuList.is(':hidden')){
 	|	menuList.fadeIn()
 	| }
@@ -7,7 +7,7 @@
 	|	menuList.fadeOut()
 	| }
 	|
-	|-- Abrir ou fechar sem efeitos
+	|-- Open or Close without effects
 	| if(menuList.is(':hidden')){
 	|	//menuList.show()
 	|	menuList.css('display', 'block')
@@ -45,7 +45,7 @@ $(function () {
 	})
 
 	if ($('target').length > 0){
-		//O elemento existe, portanto precisamos dar o scroll em algum elemento.
+		// the element exists, so we need scroll to a nelement.
 		var elemento = `#${ $('target').attr('target') }`
 
 		var divScroll = $(elemento).offset().top

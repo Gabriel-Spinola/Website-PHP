@@ -37,7 +37,7 @@ $(function () {
 				'opacity': '1'
 			}, 2000)
 
-			//Trocar bullets da navegacao do slider!
+			// Change the bullets from the slider!
 			$('.bullets span').removeClass('active-slider')
 			$('.bullets span').eq(curSlide).addClass('active-slider')
 		}, delay * 1000)
