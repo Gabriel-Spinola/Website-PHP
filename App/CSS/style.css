@@ -372,6 +372,19 @@ section.error-404 a
 	color: #444;
 }
 
+.contact-container input[ type = number ]
+{
+	margin: 8px 0;
+	width: 100%;
+	height: 40px;
+	border: 1px solid #ccc;
+	padding-left: 8px;
+	font-size: 16px;
+	max-width: 800px;
+	color: #444;
+}
+
+
 .contact-container textarea
 {
 	padding: 8px;

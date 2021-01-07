@@ -6,19 +6,19 @@
 
 		<form method="post" action="">
 
-			<input type="text" name="nome" placeholder="Nome..." required>
+			<input type="text" name="name" placeholder="Nome..." required>
 			<div></div>
 
 			<input type="text" name="email" placeholder="E-mail..." required>
 			<div></div>
 
-			<input type="number" name="telefone" placeholder="Phone Number..." required>
+			<input type="number" name="phone" placeholder="Phone Number..." required>
 			<div></div>
 
 			<textarea name="message" placeholder="Your Message..." required></textarea>
 			<div></div>
 			
-			<input type="hidden" name="identificador" value="form_contato" />
+			<input type="hidden" name="identifier" value="form_contato" />
 			<input type="submit" name="acao" value="Enviar">
 
 		</form>
