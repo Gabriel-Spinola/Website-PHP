@@ -30,7 +30,7 @@ $(function () {
 
 			curSlide++
 
-			if(curSlide > maxSlide)
+			if (curSlide > maxSlide)
 				curSlide = 0
 
 			$('.banner-single').eq(curSlide).animate({

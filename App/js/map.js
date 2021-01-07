@@ -60,14 +60,14 @@ function addMarker(lat, long, icon, content, showInfoWindow, openInfoWindow){
 		iwBackground.children(':nth-child(2)').css({
 			'background' : 'rgb(255,255,255)'
 		}).css({
-			'border-radius':'0px'
+			'border-radius': '0px'
 		})
 
 		// Remove the white background DIV
 		iwBackground.children(':nth-child(4)').css({
 			'background' : 'rgb(255,255,255)'
 		}).css({
-			'border-radius':'0px'
+			'border-radius': '0px'
 		})
 
 		// Moves the shadow of the arrow 76px to the left margin 
