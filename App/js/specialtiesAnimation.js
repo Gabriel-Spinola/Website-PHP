@@ -1,10 +1,10 @@
 $(function () {
 	let atual = -1
-	let maximo = $('.box-especialidade').length - 1
+	let maximo = $('.specialtie-box').length - 1
 	let timer
-	let animacaoDelay = 1
+	let animacaoDelay = 0.8
 
-	$('.box-especialidade').hide()
+	$('.specialtie-box').hide()
 
 	timer = setInterval(Animation, animacaoDelay * 1000)
 
@@ -17,6 +17,6 @@ $(function () {
 			return false
 		}
 
-		$('.box-especialidade').eq(atual).fadeIn()
+		$('.specialtie-box').eq(atual).fadeIn()
 	}
 })

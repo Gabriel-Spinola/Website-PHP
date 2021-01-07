@@ -9,8 +9,6 @@
 
 <head>
 
-	<link rel="stylesheet" href="<?php echo INCLUDE_PATH ?>Assets/styles/fontawesome.min.css">
-
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="keywords" content="keywords">
@@ -21,6 +19,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
 	<link rel="icon" href="<?php echo INCLUDE_PATH ?>favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="<?php echo INCLUDE_PATH ?>CSS/style.css">
+	<link rel="stylesheet" href="<?php echo INCLUDE_PATH ?>Assets/Styles/css/all.css">
 
 </head>
 
@@ -132,11 +131,11 @@
 	<script src="<?php echo INCLUDE_PATH ?>Assets/jquery.js"></script>
 	<script src="<?php echo INCLUDE_PATH ?>js/scripts.js"></script>
 	<script src="<?php echo INCLUDE_PATH ?>js/constants.js"></script>
+	<script src="<?php echo INCLUDE_PATH ?>js/specialtiesAnimation.js"></script>
 	
 	<?php if( ($url == 'home') or ($url == '') or ($url == 'testimonials') or ($url == 'services') ): ?>
 
 		<script src="<?php echo INCLUDE_PATH ?>js/slider.js"></script>
-		<script src="<?php echo INCLUDE_PATH ?>js/specialtiesAnimation.js"></script>
 	
 	<?php else: ?>
 

@@ -1,3 +1,5 @@
+<!--the font awesome just doesn't work ):-->
+
 <section class="banner-container">
 
 	<div style="background-image: url('<?php echo INCLUDE_PATH ?>images/bg-form.jpg')" class="banner-single"></div><!--banner-single-->
@@ -30,7 +32,7 @@
 
 		<article class="w50 left">
 
-			<h2>Guilherme Grillo</h2>
+			<h2>Gabriel S.</h2>
 			
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore 	et dolore magna aliqua. Ut enim ad minim veniam,
 			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -59,8 +61,8 @@
 		<h2 class="title">Specialties</h2>
 
 		<article class="w33 left specialtie-box">
-
-			<h3><i class="fa fa-address-book-o" aria-hidden="true"></i></h3>
+			
+			<h3><i class="fab fa-css3-alt"></i></h3>
 			<h4>CSS3</h4>
 
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
@@ -78,7 +80,7 @@
 
 		<article class="w33 left specialtie-box">
 
-			<h3><i class="fa fa-code" aria-hidden="true"></i></h3>
+			<h3><i class="fab fa-js-square"></i></h3>
 			<h4>Javascript</h4>
 
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
