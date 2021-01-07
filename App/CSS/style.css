@@ -133,9 +133,9 @@ section.banner-container form
 	z-index: 3;
 	position: absolute;
 	left: 50%;
-	top:50%;
-	transform:translate(-50%,-50%);
-	-ms-transform:translate(-50%,-50%);
+	top: 50%;
+	transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
 }
 
 section.banner-container form h2
@@ -169,19 +169,19 @@ section.banner-container form input[ type = submit ]
 	border: 0;
 }
 
-section.descricao-autor
+section.author-description
 {
 	padding:40px 0;
 }
 
-section.descricao-autor h2
+section.author-description h2
 {
 	font-size: 28px;
 	font-weight: 300;
 	color: #444;
 }
 
-section.descricao-autor p
+section.author-description p
 {
 	font-size: 16px;
 	color: #444;
@@ -189,13 +189,13 @@ section.descricao-autor p
 	margin-top:10px;
 }
 
-section.especialidades
+section.specialties
 {
 	padding: 40px 0;
 	background: #E2E2E2;
 }
 
-section.especialidades h2.title
+section.specialties h2.title
 {
 	font-size: 30px;
 	text-align: center;
@@ -203,27 +203,27 @@ section.especialidades h2.title
 	color: #999;
 }
 
-.box-especialidade
+.specialtie-box
 {
 	margin:40px 0;
 	padding: 0 30px;
 	text-align: center;
 }
 
-.box-especialidade h3
+.specialtie-box h3
 {
 	color: #404580;
 	font-size: 40px;
 }
 
-.box-especialidade h4
+.specialtie-box h4
 {
 	font-weight: 300;
 	font-size: 25px;
 	color: #BABABA;
 }
 
-.box-especialidade p
+.specialtie-box p
 {
 	color: #444;
 	font-size: 15px;
@@ -236,7 +236,7 @@ section.extras
 	background: #404580;
 }
 
-.servicos-container,.depoimentos-container
+.services-container, .testimonials-container
 {
 	padding: 0 50px;
 }
@@ -249,20 +249,20 @@ section.extras .title
 	margin-bottom: 15px;
 }
 
-.depoimento-single
+.testimonial-single
 {
 	padding: 15px 0;
 	border-bottom: 1px solid #5056A0;
 }
 
-p.depoimento-descricao
+p.testimonials-description
 {
 	font-size: 15px;
 	color: white;
 	font-weight: 300;
 }
 
-p.nome-autor
+p.author-name
 {
 	font-size: 15px;
 	color: white;
@@ -270,13 +270,13 @@ p.nome-autor
 	font-weight:bold;
 }
 
-.servicos ul
+.services ul
 {
 	margin:20px 0;
 	
 }
 
-.servicos li
+.services li
 {
 	margin-bottom: 15px;
 	font-size: 15px;
@@ -305,14 +305,14 @@ footer p
 	font-size: 16px;
 }
 
-/**Para arrumar scroll-x do IE e EDGE.**/
+/**fix scroll-x of IE and EDGE.**/
 
 body
 {
 	overflow-x: hidden;
 }
 
-section.erro-404 h2
+section.error-404 h2
 {
 	text-align: center;
 	color: #444;
@@ -321,7 +321,7 @@ section.erro-404 h2
 	border-top: 2px solid #444;
 }
 
-section.erro-404 p
+section.error-404 p
 {
 	margin-top:8px;
 	text-align: center;
@@ -330,7 +330,7 @@ section.erro-404 p
 	font-weight: 300;
 }
 
-section.erro-404 a
+section.error-404 a
 {
 	color: #444;
 }
@@ -354,13 +354,13 @@ section.erro-404 a
 	height: 400px;
 }
 
-.contato-container
+.contact-container
 {
 	padding:40px 0;
 	text-align: center;
 }
 
-.contato-container input[ type = text ]
+.contact-container input[ type = text ]
 {
 	margin:8px 0;
 	width: 100%;
@@ -372,7 +372,7 @@ section.erro-404 a
 	color: #444;
 }
 
-.contato-container textarea
+.contact-container textarea
 {
 	padding: 8px;
 	margin:8px 0;
@@ -386,7 +386,7 @@ section.erro-404 a
 	color: #444;
 }
 
-.contato-container input[ type = submit ]
+.contact-container input[ type = submit ]
 {
 	background: #00C59E;
 	width: 140px;
@@ -443,7 +443,7 @@ footer.down-footer
 		padding: 20px;
 	}
 	
-	.box-especialidade {
+	.specialtie-box {
 		padding:40px 20px;
 		margin: 0;
 	}
@@ -459,7 +459,7 @@ footer.down-footer
 		display: block;
 	}
 	
-	.botao-menu-mobile {
+	.menu-button-mobile {
 		font-size: 24px;
 		cursor: pointer;
 		color: white;

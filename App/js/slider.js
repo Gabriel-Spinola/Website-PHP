@@ -1,5 +1,4 @@
 $(function () {
-
 	let curSlide = 0
 	let maxSlide = $('.banner-single').length - 1
 	let delay = 3

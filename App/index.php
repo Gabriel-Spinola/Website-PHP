@@ -32,12 +32,12 @@
 		$url = isset($_GET['url']) ? $_GET['url'] : 'home';
 
 		switch($url) {
-			case 'depoimentos':
-				echo '<target target="depoimentos">';
+			case 'testimonials':
+				echo '<target target="testimonials">';
 			break;
 
-			case 'servicos':
-				echo '<target target="servicos">';
+			case 'services':
+				echo '<target target="services">';
 			break;
 		}
 
@@ -58,9 +58,9 @@
 				<ul>
 
 					<li><a href="<?php echo INCLUDE_PATH ?>">Home</a></li>
-					<li><a href="<?php echo INCLUDE_PATH ?>depoimentos">Depoimentos</a></li>
-					<li><a href="<?php echo INCLUDE_PATH ?>servicos">Serviços</a></li>
-					<li><a href="<?php echo INCLUDE_PATH ?>contato">Contato</a></li>
+					<li><a href="<?php echo INCLUDE_PATH ?>testimonials">Testimonials</a></li>
+					<li><a href="<?php echo INCLUDE_PATH ?>services">Services</a></li>
+					<li><a href="<?php echo INCLUDE_PATH ?>contact">Contact</a></li>
 
 				</ul>
 
@@ -68,18 +68,18 @@
 
 			<nav class="mobile right">
 
-			 	<div class="botao-menu-mobile">
+			 	<div class="menu-mobile-button">
 
 			 		<i class="fa fa-bars" aria-hidden="true"></i>
 
-			 	</div><!--botao-menu-mobile-->
+			 	</div><!--menu-mobile-button-->
 
 				<ul>
 
 					<li><a href="<?php echo INCLUDE_PATH ?>">Home</a></li>
-					<li><a href="<?php echo INCLUDE_PATH ?>depoimentos">Depoimentos</a></li>
-					<li><a href="<?php echo INCLUDE_PATH ?>servicos">Serviços</a></li>
-					<li><a href="<?php echo INCLUDE_PATH ?>contato">Contato</a></li>
+					<li><a href="<?php echo INCLUDE_PATH ?>testimonials">Testimonials</a></li>
+					<li><a href="<?php echo INCLUDE_PATH ?>services">Services</a></li>
+					<li><a href="<?php echo INCLUDE_PATH ?>contact">Contact</a></li>
 
 				</ul>
 
@@ -91,14 +91,14 @@
 
 	</header>
 
-	<main class="container-principal">
+	<main class="principal-container">
 
 		<?php
 			
 			if(file_exists('pages/' . $url . '.php')) {
 				include 'pages/' . $url . '.php';
 			} else {
-				if($url != 'depoimentos' && $url != 'servicos') {
+				if($url != 'testimonials' && $url != 'services') {
 					$pagina404 = true;
 
 					include 'pages/404.php';
@@ -109,10 +109,12 @@
 
 		?>
 
-	</main><!--container-principal-->
+	</main><!--principal-container-->
 
-	<footer <?php if( (isset($pagina404)) and ($pagina404) ) echo 'class="fixed"';
-	elseif($url == 'contato') echo 'class="down-footer"'; ?> >
+	<footer <?php 
+		if( (isset($pagina404)) and ($pagina404) ) echo 'class="fixed"';
+		elseif($url == 'contact') echo 'class="down-footer"'; 
+	?> >
 
 		<div class="center">
 
@@ -130,10 +132,10 @@
 	<script src="<?php echo INCLUDE_PATH ?>js/scripts.js"></script>
 	<script src="<?php echo INCLUDE_PATH ?>js/constants.js"></script>
 	
-	<?php if( ($url == 'home') or ($url == '') or ($url == 'depoimentos') or ($url == 'servicos') ): ?>
+	<?php if( ($url == 'home') or ($url == '') or ($url == 'testimonials') or ($url == 'services') ): ?>
 
 		<script src="<?php echo INCLUDE_PATH ?>js/slider.js"></script>
-		<script src="<?php echo INCLUDE_PATH ?>js/exemplo.js"></script>
+		<script src="<?php echo INCLUDE_PATH ?>js/specialtiesAnimation.js"></script>
 	
 	<?php else: ?>
 

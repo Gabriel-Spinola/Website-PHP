@@ -9,10 +9,10 @@
 
 		<form>
 
-			<h2>Qual o seu melhor email?</h2>
+			<h2>What's your best E-mail</h2>
 
 			<input type="email" name="email">
-			<input type="submit" name="acao" value="Cadastrar">
+			<input type="submit" name="action" value="Submit">
 
 		</form>
 
@@ -24,7 +24,7 @@
 
 </section><!--banner-container-->
 
-<section class="descricao-autor">
+<section class="author-description">
 
 	<div class="center">
 
@@ -50,86 +50,86 @@
 
 	</div><!--center-->
 
-</section><!--descricao-autor-->
+</section><!--author-description-->
 
-<section class="especialidades">
+<section class="specialties">
 
 	<div class="center">
 
-		<h2 class="title">Especialidades</h2>
+		<h2 class="title">Specialties</h2>
 
-		<article class="w33 left box-especialidade">
+		<article class="w33 left specialtie-box">
 
 			<h3><i class="fa fa-address-book-o" aria-hidden="true"></i></h3>
 			<h4>CSS3</h4>
 
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
 
-		</article><!--box-especialidade-->
+		</article><!--specialtie-box-->
 
-		<article class="w33 left box-especialidade">
+		<article class="w33 left specialtie-box">
 
 			<h3><i class="fa fa-html5"></i></h3>
 			<h4>HTML 5</h4>
 
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
 
-		</article><!--box-especialidade-->
+		</article><!--specialtie-box-->
 
-		<article class="w33 left box-especialidade">
+		<article class="w33 left specialtie-box">
 
-			<h3><i class="fa fa-gg-circle"></i></h3>
+			<h3><i class="fa fa-code" aria-hidden="true"></i></h3>
 			<h4>Javascript</h4>
 
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
 
-		</article><!--box-especialidade-->
+		</article><!--specialtie-box-->
 
 		<div class="clear"></div>
 
 	</div><!--center-->
 
-</section><!--especialidades-->
+</section><!--specialties-->
 
 <section class="extras">
 
 	<div class="center">
 
-		<div id="depoimentos" class="w50 left depoimentos-container">
+		<div id="testimonials" class="w50 left testimonials-container">
 
-			<h2 class="title">Depoimentos dos nossos clientes</h2>
+			<h2 class="title">testimonials from our customers</h2>
 			
-			<article class="depoimento-single">
+			<article class="testimonial-single">
 
-				<p class="depoimento-descricao">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+				<p class="testimonials-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
 
-				<p class="nome-autor">Lorem ipsum</p>
+				<p class="author-name">Lorem ipsum</p>
 
-			</article><!--depoimento-single-->
+			</article><!--testimonial-single-->
 
-			<article class="depoimento-single">
+			<article class="testimonial-single">
 
-				<p class="depoimento-descricao">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+				<p class="testimonials-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
 
-				<p class="nome-autor">Lorem ipsum</p>
+				<p class="author-name">Lorem ipsum</p>
 
-			</article><!--depoimento-single-->
+			</article><!--testimonial-single-->
 
-			<article class="depoimento-single">
+			<article class="testimonial-single">
 
-				<p class="depoimento-descricao">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+				<p class="testimonials-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
 
-				<p class="nome-autor">Lorem ipsum</p>
+				<p class="author-name">Lorem ipsum</p>
 
-			</article><!--depoimento-single-->
+			</article><!--testimonial-single-->
 
 		</div><!--w50 left depoimentos-container-->
 
-		<div id="servicos" class="w50 left servicos-container">
+		<div id="services" class="w50 left services-container">
 
-			<h2 class="title">Serviços</h2>
+			<h2 class="title">Services</h2>
 
-			<div class="servicos">
+			<div class="services">
 
 				<ul>
 
@@ -142,9 +142,9 @@
 
 				</ul>
 
-			</div><!--servicos-->
+			</div><!--services-->
 
-		</div><!--w50 left servicos-container-->
+		</div><!--w50 left services-container-->
 
 		<div class="clear"></div>
 

@@ -1,46 +1,46 @@
 /*
 	|-- Abrir menu através do fadein
-	| if (listaMenu.is(':hidden')){
-	|	listaMenu.fadeIn()
+	| if (menuList.is(':hidden')){
+	|	menuList.fadeIn()
 	| }
 	| else {
-	|	listaMenu.fadeOut()
+	|	menuList.fadeOut()
 	| }
 	|
 	|-- Abrir ou fechar sem efeitos
-	| if(listaMenu.is(':hidden')){
-	|	//listaMenu.show()
-	|	listaMenu.css('display', 'block')
+	| if(menuList.is(':hidden')){
+	|	//menuList.show()
+	|	menuList.css('display', 'block')
 	| }
 	| else{
-	|	//listaMenu.hide()
-	|	listaMenu.css('display', 'none')
+	|	//menuList.hide()
+	|	menuList.css('display', 'none')
 	| }
 */
 
 $(function () {
 	$('nav.mobile').click(() => {
-		var listaMenu = $('nav.mobile ul')
+		var menuList = $('nav.mobile ul')
 
-		if (listaMenu.is(':hidden')) {
+		if (menuList.is(':hidden')) {
 			//fa fa-times
 			//fa fa-bars
-			//var icone =  $('.botao-menu-mobile i')
+			//var icon =  $('.menu-mobile-button i')
 
-			var icone = $('.botao-menu-mobile').find('i')
+			var icon = $('.menu-mobile-button').find('i')
 
-			icone.removeClass('fa-bars')
-			icone.addClass('fa-times')
+			icon.removeClass('fa-bars')
+			icon.addClass('fa-times')
 
-			listaMenu.slideToggle()
+			menuList.slideToggle()
 		}
 		else {
-			var icone = $('.botao-menu-mobile').find('i')
+			var icon = $('.menu-mobile-button').find('i')
 
-			icone.removeClass('fa-times')
-			icone.addClass('fa-bars')
+			icon.removeClass('fa-times')
+			icon.addClass('fa-bars')
 
-			listaMenu.slideToggle()
+			menuList.slideToggle()
 		}
 	})
 
@@ -53,27 +53,5 @@ $(function () {
 		$('html, body').animate({
 			scrollTop: divScroll
 		}, 2000)
-	}
-
-	//carregarDinamico()
-
-	function carregarDinamico() {
-		$('#realtime').click(() => {
-			var pagina = $(this).attr('realtime')
-
-			$('.container-principal').hide()
-			$('.container-principal').load(`${ include_path }Pages/${ pagina }.php`)
-			
-			setTimeout(() => {
-				initialize()
-				addMarker(-27.609959, -48.576585, '', "Minha casa", undefined, false)
-			}, 1000)
-
-			$('.container-principal').fadeIn(1000)
-
-			window.history.pushState('', '', pagina)
-
-			return false
-		})
 	}
 })
