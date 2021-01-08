@@ -4,7 +4,7 @@
 
 	<div class="center">
 
-		<form method="post" action="">
+		<form method="post">
 
 			<input type="text" name="name" placeholder="Nome..." required>
 			<div></div>
@@ -18,8 +18,8 @@
 			<textarea name="message" placeholder="Your Message..." required></textarea>
 			<div></div>
 
-			<input type="hidden" name="identifier" value="form_contato" />
-			<input type="submit" name="acao" value="Enviar">
+			<input type="hidden" name="identifier" value="form_contact">
+			<input type="submit" name="action" value="Send">
 
 		</form>
 

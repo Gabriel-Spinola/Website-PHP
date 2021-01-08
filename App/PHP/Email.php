@@ -11,7 +11,8 @@ class Email
     private $mail;
 
     public function __construct(
-        $host, $username, $password, $name,
+        $host, $username,
+        $password, $name,
     ) {
         // Load Composer's autoloader
         require 'phpMailer/vendor/autoload.php';

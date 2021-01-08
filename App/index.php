@@ -25,6 +25,76 @@
 
 <body>
 
+	<div class="mail-bug">
+	<?php
+	
+	if(isset($_POST['action']) && $_POST['identifier'] == 'form_home') {
+		// required atribute for old browsers
+		if($_POST['email'] != '') {
+			$email = $_POST['email'];
+
+			// validate e-mail
+			if(filter_var($email, FILTER_VALIDATE_EMAIL)) {
+				// Instantiate Email class
+				$mail = new Email(
+					host: 'smtp.gmail.com',
+					username: 'sampleemail7000@gmail.com',
+					password: 'Sample.123',
+					name: 'Gabriel'
+				);
+
+				// Add Address
+				$mail -> AddAddress(email: $email, name: 'X');
+
+				// Format the email
+				$mail -> FormatEmail(info: [
+					'subject' => 'Your email has been registered',
+					'body' => 'Thanks for the preference' . ' <hr> ' . $email
+				]);
+
+				// Send
+				if($mail -> SendEmail()) {
+					echo "<script>alert('Your email has been sent')</script>";
+				} else {
+					echo "<script>alert('Enter a Valid Email')</script>";
+				}
+			} else {
+				echo "<script>alert('Enter a Valid Email')</script>";
+			}
+		} else if($_POST['action'] && $_POST['identifier'] == 'form_contact') {
+			$name = $_POST['name'];
+			$subject = 'New Site Message';
+			$body = '';
+
+			foreach($_POST as $key => $row) {
+				$body .= ucfirst($key) . ': ' . $row . '<hr>';
+			}
+
+			$mail = new Email(
+				host: 'smtp.gmail.com',
+				username: 'sampleemail7000@gmail.com',
+				password: 'Sample.123',
+				name: 'Gabriel'
+			);
+
+			$mail -> AddAddress(email: 'sampleemail7000@gmail.com', name: '$name');
+
+			$mail -> FormatEmail(info: [
+				'subject' => $subject,
+				'body' => $body
+			]);
+
+			if($mail -> SendEmail()) {
+				echo "<script>alert('Your email has been sent')</script>";
+			} else {
+				echo "<script>alert('Enter a Valid Email')</script>";
+			}
+		}
+	}
+
+	?>
+	</div>
+
 	<base base="<?php echo INCLUDE_PATH ?>">
 
 	<?php
@@ -67,7 +137,7 @@
 					<li><a href="<?php echo INCLUDE_PATH ?>">Home</a></li>
 					<li><a href="<?php echo INCLUDE_PATH ?>testimonials">Testimonials</a></li>
 					<li><a href="<?php echo INCLUDE_PATH ?>services">Services</a></li>
-					<li><a href="<?php echo INCLUDE_PATH ?>contact">Contact</a></li>
+					<li><a realtime="contact" href="<?php echo INCLUDE_PATH ?>contact">Contact</a></li>
 
 				</ul>
 
@@ -86,7 +156,7 @@
 					<li><a href="<?php echo INCLUDE_PATH ?>">Home</a></li>
 					<li><a href="<?php echo INCLUDE_PATH ?>testimonials">Testimonials</a></li>
 					<li><a href="<?php echo INCLUDE_PATH ?>services">Services</a></li>
-					<li><a href="<?php echo INCLUDE_PATH ?>contact">Contact</a></li>
+					<li><a realtime="contact" href="<?php echo INCLUDE_PATH ?>contact">Contact</a></li>
 
 				</ul>
 
@@ -138,6 +208,10 @@
 	<script src="<?php echo INCLUDE_PATH ?>js/scripts.js"></script>
 	<script src="<?php echo INCLUDE_PATH ?>js/constants.js"></script>
 	<script src="<?php echo INCLUDE_PATH ?>js/specialtiesAnimation.js"></script>
+	<script src="<?php echo INCLUDE_PATH ?>js/dynamicLoad.js"></script>
+	
+	<script src="<?php echo INCLUDE_PATH ?>js/map.js"></script>
+	<script src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyDHPNQxozOzQSZ-djvWGOBUsHkBUoT_qH4'></script>
 	<script>
 
 		$(document).ready(() => {
@@ -151,10 +225,6 @@
 		<script src="<?php echo INCLUDE_PATH ?>js/slider.js"></script>
 	
 	<?php elseif(!$page404): ?>
-
-		<script src="<?php echo INCLUDE_PATH ?>js/map.js"></script>
-		<script src="<?php echo INCLUDE_PATH ?>js/dynamicLoad.js"></script>
-		<script src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyDHPNQxozOzQSZ-djvWGOBUsHkBUoT_qH4'></script>
 
 	<?php endif ?>
 
