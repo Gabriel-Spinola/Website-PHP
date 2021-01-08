@@ -118,11 +118,11 @@
 
 		?>
 
-	<?php
-	
+		<?php
 		
+			new Email();
 
-	?>
+		?>
 
 	</main><!--main-container-->
 
