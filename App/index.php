@@ -41,6 +41,13 @@
 			break;
 		}
 
+		function onHomeGroup(string $url): bool {
+			return (
+				$url == '' || $url == 'home' ||
+				$url == 'testimonials' || $url == 'services'
+			);
+		}
+
 	?>
 
 	<header>
@@ -91,30 +98,35 @@
 
 	</header>
 
-	<main class="principal-container">
+	<main class="main-container">
 
 		<?php
+
+			$page404 = false;
 			
 			if(file_exists('pages/' . $url . '.php')) {
 				include 'pages/' . $url . '.php';
 			} else {
-				if($url != 'testimonials' && $url != 'services') {
-					$pagina404 = true;
+				if(onHomeGroup($url)) {
+					include 'pages/home.php';
+				} else {
+					$page404 = true;
 
 					include 'pages/404.php';
-				} else {
-					include 'pages/home.php';
 				}
 			}
 
 		?>
 
-	</main><!--principal-container-->
+	<?php
+	
+		
 
-	<footer <?php 
-		if( (isset($pagina404)) and ($pagina404) ) echo 'class="fixed"';
-		elseif($url == 'contact') echo 'class="down-footer"'; 
-	?> >
+	?>
+
+	</main><!--main-container-->
+
+	<footer <?php echo isset($page404) && $page404 ? 'class="fixed"' : ($url == 'contact' ? 'class="down-footer"' : ''); ?>>
 
 		<div class="center">
 
@@ -133,11 +145,11 @@
 	<script src="<?php echo INCLUDE_PATH ?>js/constants.js"></script>
 	<script src="<?php echo INCLUDE_PATH ?>js/specialtiesAnimation.js"></script>
 	
-	<?php if( ($url == 'home') or ($url == '') or ($url == 'testimonials') or ($url == 'services') ): ?>
+	<?php if(onHomeGroup($url)): ?>
 
 		<script src="<?php echo INCLUDE_PATH ?>js/slider.js"></script>
 	
-	<?php else: ?>
+	<?php elseif(!$page404): ?>
 
 		<script src="<?php echo INCLUDE_PATH ?>js/map.js"></script>
 		<script src="<?php echo INCLUDE_PATH ?>js/dynamicLoad.js"></script>

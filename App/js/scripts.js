@@ -44,7 +44,7 @@ $(function () {
 		}
 	})
 
-	if ($('target').length > 0){
+	if ($('target').length > 0) {
 		// the element exists, so we need scroll to an element.
 		var elemento = `#${ $('target').attr('target') }`
 
