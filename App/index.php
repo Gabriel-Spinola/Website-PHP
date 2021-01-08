@@ -118,12 +118,6 @@
 
 		?>
 
-		<?php
-		
-			new Email();
-
-		?>
-
 	</main><!--main-container-->
 
 	<footer <?php echo isset($page404) && $page404 ? 'class="fixed"' : ($url == 'contact' ? 'class="down-footer"' : ''); ?>>
@@ -144,6 +138,13 @@
 	<script src="<?php echo INCLUDE_PATH ?>js/scripts.js"></script>
 	<script src="<?php echo INCLUDE_PATH ?>js/constants.js"></script>
 	<script src="<?php echo INCLUDE_PATH ?>js/specialtiesAnimation.js"></script>
+	<script>
+
+		$(document).ready(() => {
+			$('.mail-bug').hide()
+		})
+
+	</script>
 	
 	<?php if(onHomeGroup($url)): ?>
 
