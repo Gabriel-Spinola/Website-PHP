@@ -32,13 +32,13 @@
 
 		<article class="w50 left">
 
-			<h2>Gabriel S.</h2>
+			<h2>Name Surname.</h2>
 			
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore 	et dolore magna aliqua. Ut enim ad minim veniam,
+			<p class="author-article">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore 	et dolore magna aliqua. Ut enim ad minim veniam,
 			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui cum sequi voluptatum placeat, dicta laboriosam, architecto esse dignissimos nesciunt odit nam harum, aliquam blanditiis possimus quis atque ullam magnam dolor.</p>
 
 		</article><!--w50 left-->
 
