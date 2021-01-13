@@ -5,7 +5,10 @@ include '../config.php';
 $data = ['success' => false, 'error' => false];
 
 $email = $_POST['identifier'] == 'form_home' ? $_POST['email'] : 'sampleemail7000@gmail.com';
-$name = isset($_POST['name']) && $_POST['identifier'] == 'form_contact' ? $_POST['name'] : 'Anonymous';
+$name = isset($_POST['name']) &&
+    $_POST['identifier'] == 'form_contact' &&
+    filter_var($email, FILTER_VALIDATE_EMAIL) ? $_POST['name'] : 'Anonymous'
+;
 
 if($_POST['identifier'] == 'form_contact') {
     $name = $_POST['name'];
