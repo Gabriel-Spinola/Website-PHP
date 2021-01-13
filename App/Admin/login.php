@@ -11,21 +11,30 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="stylesheet" href="CSS/panel.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+        <link rel="stylesheet" href="<?php echo INCLUDE_PATH_ADMIN ?>CSS/panel.css">
 
     </head>
 
     <body>
         
-        <main>
+        <main id="main-container">
 
             <section class="login-box">
 
-                
+                <h2>Login!</h2> 
+
+                <form method="post">
+        
+                    <input type="text" name="user" placeholder="user..." required>
+                    <input type="password" name="password" placeholder="password..." required>
+                    <input type="submit" name="submit">
+
+                </form>
 
             </section><!-- login-box -->
 
-        </main>    
+        </main><!--#main-container#-->
 
         <script src="" async defer></script>
 

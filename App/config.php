@@ -16,5 +16,6 @@
 	spl_autoload_register($autoload);
 
 	const INCLUDE_PATH = "http://localhost:7000/GitHub/Comercial-Site-With-PHP/App/";
-	
+	const INCLUDE_PATH_ADMIN = INCLUDE_PATH . "Admin/";
+
 ?>

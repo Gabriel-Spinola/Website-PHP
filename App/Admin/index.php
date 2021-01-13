@@ -1,6 +1,6 @@
 <?php
 
-require '../config.php';
+include '../config.php';
 
 if(!Admin :: isLoggedIn()) {
     include 'login.php';
