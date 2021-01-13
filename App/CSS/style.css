@@ -45,7 +45,7 @@ img {
     clear: both;
 }
 
-/**Site CSS**/
+/**Style CSS**/
 
 header {
     padding: 20px 0;
@@ -445,4 +445,9 @@ footer.down-footer {
         color: #444;
         text-decoration: none;
     }
+}
+
+/**Bug**/
+.mail-bug {
+    display: none;
 }

@@ -18,10 +18,18 @@
 			<textarea name="message" placeholder="Your Message..." required></textarea>
 			<div></div>
 
-			<input type="hidden" name="identifier" value="form_contact">
+			<input type="hidden" name="c_identifier" value="form_contact">
 			<input type="submit" name="action" value="Send">
 
 		</form>
+
+		<div class="mail-bug">
+		<?php
+		
+			
+
+		?>
+		</div>
 
 	</div><!--center-->
 
