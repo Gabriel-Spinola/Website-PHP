@@ -3,7 +3,6 @@
 var map
 
 function initialize() {
-
 	var mapProp = {
 		center: new google.maps.LatLng(-27.609959,-48.576585),
 		zoom: 14,
@@ -90,3 +89,8 @@ function addMarker(lat, long, icon, content, showInfoWindow, openInfoWindow){
 		infoWindow.open(map, marker)
 	}
 }
+
+$(document).ready(function () {
+	initialize()
+	addMarker(-27.609959, -48.576585, '', "Sample", undefined, false)
+});

@@ -40,7 +40,7 @@ $(function () {
 			// Change the bullets from the slider!
 			$('.bullets span').removeClass('active-slider')
 			$('.bullets span').eq(curSlide).addClass('active-slider')
-		}, delay * 1000)
+		}, delay * 1400)
 	}
 
 	$('body').on('click', '.bullets span', () => {

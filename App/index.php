@@ -200,33 +200,32 @@
 
 	</footer><!--?fixed or null?-->
 
-
 	<!-- Imports------------->
-	
-
-	<script src="<?php echo INCLUDE_PATH ?>Assets/jquery.js"></script>
-	<script src="<?php echo INCLUDE_PATH ?>js/scripts.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="<?php echo INCLUDE_PATH ?>js/constants.js"></script>
-	<script src="<?php echo INCLUDE_PATH ?>js/specialtiesAnimation.js"></script>
-	<script src="<?php echo INCLUDE_PATH ?>js/dynamicLoad.js"></script>
-	
-	<script src="<?php echo INCLUDE_PATH ?>js/map.js"></script>
 	<script src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyDHPNQxozOzQSZ-djvWGOBUsHkBUoT_qH4'></script>
-	<script>
+	
+	<?php if(onHomeGroup($url)): ?>
+
+		<script src="<?php echo INCLUDE_PATH ?>js/slider.js"></script>
+		<script src="<?php echo INCLUDE_PATH ?>js/specialtiesAnimation.js"></script>
+		<script src="<?php echo INCLUDE_PATH ?>js/scripts.js"></script>
+
+	<?php elseif($url == 'contact'): ?>
+
+		<script src="<?php echo INCLUDE_PATH ?>js/dynamicLoad.js"></script>
+
+	<?php endif ?>
+
+	<script src="<?php echo INCLUDE_PATH ?>js/map.js"></script>
+	
+	<script type="text/javascript">
 
 		$(document).ready(() => {
 			$('.mail-bug').hide()
 		})
 
 	</script>
-	
-	<?php if(onHomeGroup($url)): ?>
-
-		<script src="<?php echo INCLUDE_PATH ?>js/slider.js"></script>
-	
-	<?php elseif(!$page404): ?>
-
-	<?php endif ?>
 
 </body>
 
