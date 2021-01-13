@@ -64,7 +64,7 @@
 		} else {
 			echo "<script>alert('Enter a Valid Email')</script>";
 		}
-	} else if(isset($_POST['action']) && $_POST['c_identifier'] == 'form_contact') {
+	} else if(isset($_POST['action']) && $_POST['identifier'] == 'form_contact') {
 		$name = $_POST['name'];
 		$email = $_POST['email'];
 		$subject = 'New Site Message';
