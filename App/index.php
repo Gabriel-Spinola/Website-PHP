@@ -211,6 +211,7 @@
 	<script src="<?php echo INCLUDE_PATH ?>js/slider.js"></script>
 	<script src="<?php echo INCLUDE_PATH ?>js/specialtiesAnimation.js"></script>
 	<script src="<?php echo INCLUDE_PATH ?>js/scripts.js"></script>
+	<script src="<?php echo INCLUDE_PATH ?>js/forms.js"></script>
 	<script src="<?php echo INCLUDE_PATH ?>js/map.js"></script>
 
 </body>
