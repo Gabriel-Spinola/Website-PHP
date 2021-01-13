@@ -18,7 +18,7 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
 	<link rel="icon" href="<?php echo INCLUDE_PATH ?>favicon.ico" type="image/x-icon">
-	<link rel="stylesheet" href="<?php echo INCLUDE_PATH ?>CSS/style.css">
+	<link rel="stylesheet" href="<?php echo INCLUDE_PATH ?>CSS/main.css">
 	<link rel="stylesheet" href="<?php echo INCLUDE_PATH ?>Assets/Styles/css/all.css">
 
 </head>

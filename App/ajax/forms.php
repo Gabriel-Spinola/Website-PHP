@@ -23,7 +23,7 @@ $i = 0;
 // format info (capitalize first letter)
 foreach($_POST as $key => $row) {
     if ($key == 'identifier') continue;
-    if ($message != $defaultMessage) $body .= ' ' . $defaultMessage . " <br> ";
+    if ($message != $defaultMessage && $message != $_POST['message']) $body .= ' ' . $defaultMessage . " <br> ";
     
     $body .= ucfirst($key) . ': ' . $row . '<hr>';
 }

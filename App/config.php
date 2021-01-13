@@ -3,6 +3,8 @@
 	use PHPMailer\PHPMailer\PHPMailer;
 	use PHPMailer\PHPMailer\Exception;
 
+	session_start();
+
 	$autoload = function ($class): void {
 		if ($class == 'Email') {
 			require 'PHP/phpMailer/vendor/autoload.php';
