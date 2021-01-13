@@ -4,26 +4,27 @@ include '../config.php';
 
 $data = ['success' => false, 'error' => false];
 
+$defaultMessage = "Thanks for sending your email, now you're registered";
+
 $email = $_POST['identifier'] == 'form_home' ? $_POST['email'] : 'sampleemail7000@gmail.com';
-$name = isset($_POST['name']) &&
-    $_POST['identifier'] == 'form_contact' &&
-    filter_var($email, FILTER_VALIDATE_EMAIL) ? $_POST['name'] : 'Anonymous'
-;
+$name = isset($_POST['name']) && $_POST['identifier'] == 'form_contact' ? $_POST['name'] : 'Anonymous';
+$message = $_POST['identifier'] == 'form_contact' ? $_POST['message'] : '';
 
 if($_POST['identifier'] == 'form_contact') {
     $name = $_POST['name'];
     $phone = $_POST['phone'];
-    $message = $_POST['message'];
 }
 
 $subject = 'New Site Message';
 $body = '';
 
+$i = 0;
+
 // format info (capitalize first letter)
 foreach($_POST as $key => $row) {
-    if ($key == 'identifier')
-        continue;
-
+    if ($key == 'identifier') continue;
+    if ($message != $defaultMessage) $body .= ' ' . $defaultMessage . " <br> ";
+    
     $body .= ucfirst($key) . ': ' . $row . '<hr>';
 }
 
