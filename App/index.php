@@ -50,6 +50,24 @@
 
 	?>
 
+	<div class="success">
+
+		<p>The form was successfully sent (:</p>
+
+	</div>
+
+	<div class="error">
+
+		<p>The form could not be sent ):</p>
+
+	</div>
+
+	<div class="overlay-loading">
+	
+		<img src="<?php echo INCLUDE_PATH ?>images/ajax-loader (2).gif">
+	
+	</div><!--overlay-loading-->
+
 	<header>
 
 		<div class="center">

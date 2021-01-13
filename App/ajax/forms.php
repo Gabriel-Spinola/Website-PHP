@@ -1,9 +1,8 @@
-<div class="mail-bug">
 <?php
 
 include '../config.php';
 
-$data = [];
+$data = ['success' => false, 'error' => false];
 
 $email = $_POST['identifier'] == 'form_home' ? $_POST['email'] : 'sampleemail7000@gmail.com';
 $name = isset($_POST['name']) && $_POST['identifier'] == 'form_contact' ? $_POST['name'] : 'Anonymous';
@@ -41,8 +40,10 @@ $mail -> FormatEmail(info: [
 
 if($mail -> SendEmail()) {
     $data['success'] = true;
+    $data['error'] = false;
 } else {
     $data['error'] = true;
+    $data['success'] = false;
 }
 
 die(json_encode($data));
