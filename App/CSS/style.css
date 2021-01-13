@@ -494,8 +494,3 @@ footer.down-footer {
         text-decoration: none;
     }
 }
-
-/**Bug**/
-.mail-bug {
-    display: none;
-}
