@@ -14,13 +14,14 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-        <title>Control Panel</title>
+        <title>DashBoard</title>
 
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
         <link rel="stylesheet" href="<?php echo INCLUDE_PATH_ADMIN ?>CSS/panel.css">
+        <link rel="stylesheet" href="<?php echo INCLUDE_PATH ?>Assets/Styles/css/all.css">
 
     </head>
 
@@ -66,11 +67,11 @@
 
                         header('Location: ' . INCLUDE_PATH_ADMIN);
                         die(); 
-                        
+
                     ?>
                     <?php else: ?>
                         
-                        <div class="error-box">Incorrect username or password.</div>
+                        <div class="error-box">Incorrect username or password. <i class="fa fa-times"></i></div>
 
                     <?php endif ?>
 
