@@ -75,7 +75,7 @@
 
                     <?php endif ?>
 
-                <?php endif ?>
+                <?php endif ?> 
 
             </section><!-- login-box -->
 
