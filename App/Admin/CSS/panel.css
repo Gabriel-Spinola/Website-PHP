@@ -82,10 +82,12 @@ section.login-box input[type="submit"] {
 /**Main**/
 
 aside {
+    overflow-y: auto;
     height: 100%;
     float: left;
     background-color: red;
     width: 300px;
+    background: #60858b;
 }
 
 header#header-container {

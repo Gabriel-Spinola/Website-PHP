@@ -1,3 +1,11 @@
+<?php
+
+    if(isset($_GET['logout'])) {
+        Admin :: logout();
+    }
+
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -31,7 +39,7 @@
 
         <div class="logout">
 
-            <a href="<?php echo INCLUDE_PATH_ADMIN ?>logout">Logout <i class="fas fa-door-closed"></i></a>
+            <a href="<?php echo INCLUDE_PATH_ADMIN ?>?logout">Logout <i class="fas fa-door-closed"></i></a>
     
         </div><!--logout-->
 
