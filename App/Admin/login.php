@@ -49,7 +49,7 @@
                         $password = $_POST['password'];
 
                         $query = $MySql -> connect() -> prepare(
-                            "SELECT * FROM `tb_admin.users`
+                           "SELECT * FROM `tb_admin.users`
                             WHERE user = ? AND `password` = ?;"
                         ); 
                         $query -> execute([
