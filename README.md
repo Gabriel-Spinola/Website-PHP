@@ -10,7 +10,7 @@
 
 ### How to Run in Your Pc:
   You need the [jQuery lib](https://jquery.com/), [Google Maps api](https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyDHPNQxozOzQSZ-djvWGOBUsHkBUoT_qH4),
-  [MySql(phpMyAdmin)]("https://github.com/Gabriel-Spinola/Website-PHP/blob/Back-End/DataBase/tb_phpwebproject.sql"), and the [PHPMailer](https://github.com/PHPMailer/PHPMailer).
+  [MySql(phpMyAdmin)](https://github.com/Gabriel-Spinola/Website-PHP/blob/main/DataBase/tb_phpwebproject.sql), and the [PHPMailer](https://github.com/PHPMailer/PHPMailer).
 
 <hr>
 
