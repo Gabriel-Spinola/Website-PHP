@@ -29,32 +29,36 @@
 
 <aside class="menu">
 
-    <div class="user-box">
+    <div class="menu-wrapper"></div>
 
-        <?php if($_SESSION['img'] == ''): ?>
+        <div class="user-box">
 
-            <div class="user-pic-icon">
+            <?php if($_SESSION['img'] == ''): ?>
 
-                <i class="fa fa-user"></i>
+                <div class="user-pic-icon">
 
-            </div><!--user-pic-->
+                    <i class="fa fa-user"></i>
 
-        <?php else: ?>
+                </div><!--user-pic-->
 
-            <div class="user-pic">
+            <?php else: ?>
 
-                <img src="<?php echo INCLUDE_PATH_ADMIN ?>Uploads/<?php echo $_SESSION['img'] ?>">
+                <div class="user-pic">
 
-            </div><!--user-pic-->
+                    <img src="<?php echo INCLUDE_PATH_ADMIN ?>Uploads/<?php echo $_SESSION['img'] ?>">
 
-        <?php endif ?>
+                </div><!--user-pic-->
 
-        <div class="user-name">
+            <?php endif ?>
 
-            <p><?php print $_SESSION['name'] ?></p>
-            <p><?php print Admin :: getPosition($_SESSION['position']); ?></p>
+            <div class="user-name">
 
-        </div><!--user-name-->
+                <p><?php print $_SESSION['name'] ?></p>
+                <p><?php print Admin :: getPosition($_SESSION['position']); ?></p>
+
+            </div><!--user-name-->
+
+        </div><!--menu-wrapper-->
 
     </div><!--user-box-->
 
@@ -112,7 +116,8 @@
 
 </main><!--#main-container#-->
 
-<script src="" async defer></script>
+<script src="<?php echo INCLUDE_PATH ?>Assets/jquery.js"></script>
+<script src="<?php echo INCLUDE_PATH_ADMIN ?>Scripts/main.js" async defer></script>
     
 </body>
 

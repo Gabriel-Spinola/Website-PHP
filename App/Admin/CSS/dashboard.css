@@ -11,6 +11,10 @@ body {
     background: rgba(225, 225, 225)
 }
 
+body {
+    overflow-x: hidden;
+}
+
 /**Boot**/
 
 .clear {
@@ -116,9 +120,14 @@ div.logout a {
     color: #fff;
 }
 
+div.menu-wrapper {
+    width: 300px;
+}
+
 aside.menu {
     position: fixed;
     overflow-y: auto;
+    overflow-x: hidden;
     height: 100%;
     float: left;
     left: 0;
@@ -205,7 +214,12 @@ section.content-box {
 
 @media screen and (max-width: 768px) {
     aside.menu {
-        display: none;
+        width: 0;
+        padding: 0;
+    }
+
+    .menu-wrapper {
+        width: 200px;
     }
 
     header.header-container {
@@ -216,22 +230,6 @@ section.content-box {
     main.main-container {
         left: 0;
         width: 100%;
-    }
-}
-
-/* @media screen and (max-width: 600px) {
-    aside.menu {
-        width: 180px;
-    }
-
-    header.header-container {
-        left: 180px;
-        width: calc(100% - 180px)
-    }
-
-    main.main-container {
-        width: calc(100% - 180px);
-        left: 180px;
     }
 
     .user-pic-icon {
@@ -246,4 +244,4 @@ section.content-box {
     .user-name p {
         font-size: 14px;
     }
-} */
+}
