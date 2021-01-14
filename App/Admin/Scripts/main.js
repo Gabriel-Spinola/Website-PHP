@@ -27,8 +27,6 @@ $(function () {
                     'padding' : '10px'
                 }, () => {
                     openMenu = true
-
-                    location.reload()
                 })
 
                 $('.main-container, .header-container').animate({
@@ -36,14 +34,16 @@ $(function () {
                 }, () => {
                     openMenu = true
 
-                    location.reload()
+                    if (windowSize > 765) location.reload()
                 })
             }
         })
 
         $(window).resize(() => {
+            location.reload()
+
             if (windowSize <= 768) {
-                $('.menu').css('width', '0').css('padding', '0')
+                $('aside.menu').css('width', '0').css('padding', '0')
 
                 $('.main-container, .header-container').css('width', '100%').css(
                     'left', '0'

@@ -269,6 +269,12 @@ section.content-box {
 
 /**Res**/ 
 
+@media screen and (max-width: 1200px) {
+    .stats-box-single  {
+        height: 200px;
+    }
+}
+
 @media screen and (max-width: 1024px) {
     aside.menu {
         width: 250px;
@@ -282,6 +288,10 @@ section.content-box {
     main.main-container {
         width: calc(100% - 250px);
         left: 250px;
+    }
+
+    .stats-box-single {
+        width: 100%;
     }
 }
 
@@ -299,6 +309,10 @@ section.content-box {
     main.main-container {
         left: 0;
         width: 100%;
+    }
+
+    .stats-box-single  {
+        height: 150px;
     }
 
     .user-pic-icon {
