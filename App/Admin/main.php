@@ -1,1 +1,1 @@
-logged in
+<h2>Welcome <?php print $_SESSION['user'] ?> you're logged in</h2>

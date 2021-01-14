@@ -1,3 +1,11 @@
+<?php 
+
+    require '../PHP/DBConnect.php';
+
+    $MySql = new MySqlConnection; 
+
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -32,6 +40,42 @@
 
                 </form>
 
+                <?php if (isset($_POST['submit'])): ?>
+
+                    <?php
+
+                        $user = $_POST['user'];
+                        $password = $_POST['password'];
+
+                        $query = $MySql -> connect() -> prepare(
+                            "SELECT * FROM `tb_admin.users`
+                            WHERE user = ? AND `password` = ?;"
+                        ); 
+                        $query -> execute([
+                            $user, $password
+                        ]);
+                    
+                    ?>
+
+                    <!-- ? logged : failed -->
+                    <?php if ($query -> rowCount() == 1):
+
+                        $_SESSION['logged'] = true;
+                        $_SESSION['user'] = $user;
+                        $_SESSION['password'] = $password;
+
+                        header('Location: ' . INCLUDE_PATH_ADMIN);
+                        die(); 
+                        
+                    ?>
+                    <?php else: ?>
+                        
+                        <div class="error-box">Incorrect username or password.</div>
+
+                    <?php endif ?>
+
+                <?php endif ?>
+
             </section><!-- login-box -->
 
         </main><!--#main-container#-->
@@ -39,4 +83,5 @@
         <script src="" async defer></script>
 
     </body>
+
 </html>

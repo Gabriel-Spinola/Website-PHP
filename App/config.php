@@ -18,4 +18,9 @@
 	const INCLUDE_PATH = "http://localhost:7000/GitHub/Comercial-Site-With-PHP/App/";
 	const INCLUDE_PATH_ADMIN = INCLUDE_PATH . "Admin/";
 
+	const HOST = 'localhost';
+	const DB = 'tb_phpwebproject';
+	const USER = 'root';
+	const PASSWORD = '';
+
 ?>
