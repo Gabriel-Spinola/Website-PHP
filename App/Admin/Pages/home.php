@@ -2,7 +2,7 @@
 
     <div class="stats-box">
 
-        <h2><i class="fa fa-home"></i> DashBoard - Company Name</h2>
+        <h2><i class="fa fa-home"></i> DashBoard - <?php print COMPANY_NAME ?></h2>
 
         <div class="stats-box-wrapper">
 

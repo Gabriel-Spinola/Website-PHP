@@ -103,7 +103,7 @@
 
 <main class="main-container">
 
-    
+    <?php DashBoard :: loadPage() ?>
 
 </main><!--#main-container#-->
 
