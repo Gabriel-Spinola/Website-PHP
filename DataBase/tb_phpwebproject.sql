@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 14, 2021 at 07:51 PM
+-- Generation Time: Jan 14, 2021 at 11:10 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.0
 
@@ -41,7 +41,31 @@ CREATE TABLE `tb_admin.users` (
 --
 
 INSERT INTO `tb_admin.users` (`id`, `user`, `password`, `img`, `name`, `position`) VALUES
-(1, 'Admin', 'Admin', '', 'Gabriel S. Mendes', 2);
+(1, 'Admin', 'Admin', 'foto.png', 'Gabriel S. Mendes', 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_admin.users_online`
+--
+
+CREATE TABLE `tb_admin.users_online` (
+  `id` int(11) NOT NULL,
+  `ip` varchar(255) NOT NULL,
+  `last_action` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_admin.visits`
+--
+
+CREATE TABLE `tb_admin.visits` (
+  `id` int(11) NOT NULL,
+  `ip` varchar(255) NOT NULL,
+  `date` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Indexes for dumped tables
@@ -54,6 +78,18 @@ ALTER TABLE `tb_admin.users`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `tb_admin.users_online`
+--
+ALTER TABLE `tb_admin.users_online`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tb_admin.visits`
+--
+ALTER TABLE `tb_admin.visits`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -62,6 +98,18 @@ ALTER TABLE `tb_admin.users`
 --
 ALTER TABLE `tb_admin.users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `tb_admin.users_online`
+--
+ALTER TABLE `tb_admin.users_online`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `tb_admin.visits`
+--
+ALTER TABLE `tb_admin.visits`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
