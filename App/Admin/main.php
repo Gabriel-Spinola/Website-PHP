@@ -1,7 +1,7 @@
 <?php
 
     if(isset($_GET['logout'])) {
-        Admin :: logout();
+        DashBoard :: logout();
     }
 
 ?>
@@ -27,15 +27,48 @@
 
 <body>
 
-<aside>
+<aside class="menu">
 
+    <div class="user-box">
 
+        <?php if($_SESSION['img'] == ''): ?>
 
-</aside>
+            <div class="user-pic-icon">
+
+                <i class="fa fa-user"></i>
+
+            </div><!--user-pic-->
+
+        <?php else: ?>
+
+            <div class="user-pic">
+
+                <img src="<?php echo INCLUDE_PATH_ADMIN ?>Uploads/<?php echo $_SESSION['img'] ?>">
+
+            </div><!--user-pic-->
+
+        <?php endif ?>
+
+        <div class="user-name">
+
+            <p><?php print $_SESSION['name'] ?></p>
+            <p><?php print Admin :: getPosition($_SESSION['position']); ?></p>
+
+        </div><!--user-name-->
+
+    </div><!--user-box-->
+
+</aside><!--menu-->
 
 <header id="header-container">
 
     <div class="center">
+
+        <div class="menu-btn">
+
+            <i class="fa fa-bars"></i>
+
+        </div><!--menu-btn-->
 
         <div class="logout">
 

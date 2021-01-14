@@ -2,7 +2,7 @@
 
     require '../PHP/DBConnect.php';
 
-    $MySql = new MySqlConnection; 
+    $MySql = new MySqlDataBase; 
 
 ?>
 
@@ -59,11 +59,16 @@
                 ?>
 
                 <!-- ? logged : failed -->
-                <?php if ($query -> rowCount() == 1):
+                <?php if($query -> rowCount() == 1):
+
+                    $info = $query -> fetch();
 
                     $_SESSION['logged'] = true;
                     $_SESSION['user'] = $user;
                     $_SESSION['password'] = $password;
+                    $_SESSION['position'] = $info['position'];
+                    $_SESSION['name'] = $info['name'];
+                    $_SESSION['img'] = $info['img'];
 
                     header('Location: ' . INCLUDE_PATH_ADMIN);
                     die(); 

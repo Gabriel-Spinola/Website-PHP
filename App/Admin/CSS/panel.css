@@ -81,15 +81,6 @@ section.login-box input[type="submit"] {
 
 /**Main**/
 
-aside {
-    overflow-y: auto;
-    height: 100%;
-    float: left;
-    background-color: red;
-    width: 300px;
-    background: #60858b;
-}
-
 header#header-container {
     float: left;
     width: calc(100% - 300px);
@@ -105,4 +96,55 @@ div.logout {
 div.logout a {
     text-decoration: none;
     color: #fff;
+}
+
+aside.menu {
+    overflow-y: auto;
+    height: 100%;
+    float: left;
+    padding: 10px;
+    background-color: red;
+    width: 300px;
+    background: #60858b;
+}
+
+.menu-btn {
+    float: left;
+    cursor: pointer;
+    font-size: 23px;
+    color: white;
+}
+
+.user-box {
+    text-align: center;
+}
+
+.user-pic-icon {
+    text-align: left;
+    display: inline-block;
+    width: 130px;
+    height: 130px;
+    border: 3px solid #2f3d42;
+    border-radius: 50%;
+    background-color: #4b7880;
+}
+
+.user-pic-icon i {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: white;
+}
+
+.user-name {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.user-name p {
+    color: white;
+    font-size: 16px;
 }

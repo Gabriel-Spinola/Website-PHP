@@ -9,10 +9,10 @@ interface DBConnectionI {
     public function connect();
 }
 
-class MySqlConnection implements DBConnectionI {
+class MySqlDataBase implements DBConnectionI {
     private $pdo;
 
-    public function connect() {
+    public function connect(): PDO {
         if ($this -> pdo == null) {
             // Custom error message for connection failure 
             // (also prevent from data leak)

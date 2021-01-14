@@ -1,8 +1,9 @@
 <?php
 
-include '../config.php';
+require '../PHP/Admin.php';
+require '../config.php';
 
-if(!Admin :: isLoggedIn()) {
+if(!DashBoard :: isLoggedIn()) {
     include 'login.php';
 } else {
     include 'main.php';
