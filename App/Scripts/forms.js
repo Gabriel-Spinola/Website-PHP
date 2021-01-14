@@ -5,7 +5,7 @@ $(function () {
         // Send the form data to the server side
         $.ajax({
             type: 'post',
-            url: `${include_path}ajax/forms.php`,
+            url: `${include_path}Data/forms.php`,
             data: formData.serialize(),
             beforeSend: function () {
                 // start loading animation

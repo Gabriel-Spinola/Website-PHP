@@ -122,15 +122,15 @@
 
 			$page404 = false;
 			
-			if(file_exists('pages/' . $url . '.php')) {
-				include 'pages/' . $url . '.php';
+			if(file_exists('Pages/' . $url . '.php')) {
+				include 'Pages/' . $url . '.php';
 			} else {
 				if(onHomeGroup($url)) {
-					include 'pages/home.php';
+					include 'Pages/home.php';
 				} else {
 					$page404 = true;
 
-					include 'pages/404.php';
+					include 'Pages/404.php';
 				}
 			}
 
@@ -150,13 +150,13 @@
 
 	<!-- Imports------------->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<script src="<?php echo INCLUDE_PATH ?>js/constants.js"></script>
+	<script src="<?php echo INCLUDE_PATH ?>Scripts/constants.js"></script>
 	<script src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyDHPNQxozOzQSZ-djvWGOBUsHkBUoT_qH4'></script>
-	<script src="<?php echo INCLUDE_PATH ?>js/slider.js"></script>
-	<script src="<?php echo INCLUDE_PATH ?>js/specialtiesAnimation.js"></script>
-	<script src="<?php echo INCLUDE_PATH ?>js/scripts.js"></script>
-	<script src="<?php echo INCLUDE_PATH ?>js/forms.js"></script>
-	<script src="<?php echo INCLUDE_PATH ?>js/map.js"></script>
+	<script src="<?php echo INCLUDE_PATH ?>Scripts/slider.js"></script>
+	<script src="<?php echo INCLUDE_PATH ?>Scripts/specialtiesAnimation.js"></script>
+	<script src="<?php echo INCLUDE_PATH ?>Scripts/scripts.js"></script>
+	<script src="<?php echo INCLUDE_PATH ?>Scripts/forms.js"></script>
+	<script src="<?php echo INCLUDE_PATH ?>Scripts/map.js"></script>
 
 </body>
 
