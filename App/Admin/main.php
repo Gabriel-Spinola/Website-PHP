@@ -20,7 +20,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
-    <link rel="stylesheet" href="<?php echo INCLUDE_PATH_ADMIN ?>CSS/panel.css">
+    <link rel="stylesheet" href="<?php echo INCLUDE_PATH_ADMIN ?>CSS/dashboard.css">
     <link rel="stylesheet" href="<?php echo INCLUDE_PATH ?>Assets/Styles/css/all.css">
 
 </head>
@@ -57,10 +57,29 @@
         </div><!--user-name-->
 
     </div><!--user-box-->
+ 
+    <div class="menu-items">
+
+        <h2>Main Page Management</h2>
+        <a href="">Add Testimonials</a>
+        <a href="">Add Services</a>
+        <a href="">Add Slides</a>
+        <a href="">List Testimonials</a>
+        <a href="">List Services</a>
+        <a href="">List Slides</a>
+
+        <h2>DashBoard Management</h2>
+        <a href="">Edit User</a>
+        <a href="">Add User</a>
+
+        <h2>General Config</h2>
+        <a href="">Edit</a>
+        
+    </div><!--menu-items-->
 
 </aside><!--menu-->
 
-<header id="header-container">
+<header class="header-container">
 
     <div class="center">
 
@@ -82,13 +101,67 @@
 
 </header><!--#header-container#-->
 
-<main id="main-container">
+<main class="main-container">
 
+    <section class="content-box left w100">
 
+        <div class="stats-box">
+
+            <h2><i class="fa fa-home"></i> DashBoard - Company Name</h2>
+
+            <div class="stats-box-wrapper">
+
+                <div class="stats-box-single">
+
+                    <h2>Online Users</h2>
+                    <p>10</p>
+
+                </div><!--stats-box-single-->
+
+                <div class="stats-box-single">
+
+                    <h2>Visits Total</h2>
+                    <p>100</p>
+
+                </div><!--stats-box-single-->
+
+                <div class="stats-box-single">
+
+                    <h2>Today's Visits</h2>
+                    <p>3</p>
+
+                </div><!--stats-box-single-->
+
+            </div><!--stats-box-wrapper-->
+
+        </div><!--stats-box-->
+
+    </section><!--content-box-->
+
+    <!-- <section class="content-box left w100">
+
+        
+
+    </section>
+
+    <section class="content-box left w50">
+
+        
+
+    </section>
+
+    <section class="content-box right w50">
+
+        
+
+    </section>content-box -->
+
+    <div class="clear"></div> 
 
 </main><!--#main-container#-->
 
-<script src="" async defer></script>
+<script src="<?php echo INCLUDE_PATH ?>Assets/jquery.js"></script>
+<script src="<?php echo INCLUDE_PATH_ADMIN ?>Scripts/main.js" async defer></script>
     
 </body>
 
