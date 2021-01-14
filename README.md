@@ -9,8 +9,8 @@
 <hr>
 
 ### How to Run in Your Pc:
-  You need the [jQuery lib](https://jquery.com/), the [Google Maps api](https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyDHPNQxozOzQSZ-djvWGOBUsHkBUoT_qH4),
-  and the [PHPMailer](https://github.com/PHPMailer/PHPMailer).
+  You need the [jQuery lib](https://jquery.com/), [Google Maps api](https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyDHPNQxozOzQSZ-djvWGOBUsHkBUoT_qH4),
+  MySql(phpMyAdmin), and the [PHPMailer](https://github.com/PHPMailer/PHPMailer).
 
 <hr>
 
