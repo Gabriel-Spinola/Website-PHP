@@ -29,38 +29,53 @@
 
 <aside class="menu">
 
-    <div class="menu-wrapper"></div>
+    <div class="user-box">
 
-        <div class="user-box">
+        <?php if($_SESSION['img'] == ''): ?>
 
-            <?php if($_SESSION['img'] == ''): ?>
+            <div class="user-pic-icon">
 
-                <div class="user-pic-icon">
+                <i class="fa fa-user"></i>
 
-                    <i class="fa fa-user"></i>
+            </div><!--user-pic-->
 
-                </div><!--user-pic-->
+        <?php else: ?>
 
-            <?php else: ?>
+            <div class="user-pic">
 
-                <div class="user-pic">
+                <img src="<?php echo INCLUDE_PATH_ADMIN ?>Uploads/<?php echo $_SESSION['img'] ?>">
 
-                    <img src="<?php echo INCLUDE_PATH_ADMIN ?>Uploads/<?php echo $_SESSION['img'] ?>">
+            </div><!--user-pic-->
 
-                </div><!--user-pic-->
+        <?php endif ?>
 
-            <?php endif ?>
+        <div class="user-name">
 
-            <div class="user-name">
+            <p><?php print $_SESSION['name'] ?></p>
+            <p><?php print Admin :: getPosition($_SESSION['position']); ?></p>
 
-                <p><?php print $_SESSION['name'] ?></p>
-                <p><?php print Admin :: getPosition($_SESSION['position']); ?></p>
-
-            </div><!--user-name-->
-
-        </div><!--menu-wrapper-->
+        </div><!--user-name-->
 
     </div><!--user-box-->
+ 
+    <div class="menu-items">
+
+        <h2>Main Page Management</h2>
+        <a href="">Add Testimonials</a>
+        <a href="">Add Services</a>
+        <a href="">Add Slides</a>
+        <a href="">List Testimonials</a>
+        <a href="">List Services</a>
+        <a href="">List Slides</a>
+
+        <h2>DashBoard Management</h2>
+        <a href="">Edit User</a>
+        <a href="">Add User</a>
+
+        <h2>General Config</h2>
+        <a href="">Edit</a>
+        
+    </div><!--menu-items-->
 
 </aside><!--menu-->
 
@@ -90,7 +105,36 @@
 
     <section class="content-box left w100">
 
-        
+        <div class="stats-box">
+
+            <h2><i class="fa fa-home"></i> DashBoard - Company Name</h2>
+
+            <div class="stats-box-wrapper">
+
+                <div class="stats-box-single">
+
+                    <h2>Online Users</h2>
+                    <p>10</p>
+
+                </div><!--stats-box-single-->
+
+                <div class="stats-box-single">
+
+                    <h2>Visits Total</h2>
+                    <p>100</p>
+
+                </div><!--stats-box-single-->
+
+                <div class="stats-box-single">
+
+                    <h2>Today's Visits</h2>
+                    <p>3</p>
+
+                </div><!--stats-box-single-->
+
+            </div><!--stats-box-wrapper-->
+
+        </div><!--stats-box-->
 
     </section><!--content-box-->
 
@@ -112,7 +156,7 @@
 
     </section>content-box -->
 
-    <div class="clear"></div>
+    <div class="clear"></div> 
 
 </main><!--#main-container#-->
 

@@ -120,10 +120,6 @@ div.logout a {
     color: #fff;
 }
 
-div.menu-wrapper {
-    width: 300px;
-}
-
 aside.menu {
     position: fixed;
     overflow-y: auto;
@@ -132,7 +128,7 @@ aside.menu {
     float: left;
     left: 0;
     top: 0;
-    padding: 10px;
+    padding: 10px 0;
     background-color: red;
     width: 300px;
     background: #60858b;
@@ -169,6 +165,20 @@ aside.menu {
     color: white;
 }
 
+.user-pic {
+    display: inline-block;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+}
+
+.user-pic img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 2px solid #2f3d42;
+}
+
 .user-name {
     text-align: center;
     margin-top: 10px;
@@ -177,6 +187,32 @@ aside.menu {
 .user-name p {
     color: white;
     font-size: 16px;
+}
+
+.menu-items {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.menu-items h2 {
+    /* border-top: 3px solid #4b7880;
+    border-bottom: 3px solid #4b7880; */
+    background: #2f3d42;
+    color: white;
+    padding: 8px;
+    text-align: left;
+    font-size: 16px;
+}
+
+.menu-items a {
+    border-bottom: 3px solid #2f3d42;
+    color: white;
+    padding: 8px;
+    display: block;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400px;
+    background-color: #4b7880;
 }
 
 /**Main Content**/
@@ -192,6 +228,43 @@ section.content-box {
     background: white;
     padding: 10px;
     margin-bottom: 10px;
+}
+
+.stats-box {
+	margin-top: 16px;
+	padding: 0 15px;
+}
+
+.stats-box-single {
+	float: left;
+	position: relative;
+	width: 33.3%;
+	background: #F4B03E;
+    border: 5px solid white;
+    padding-left: 15px;
+}
+
+.stats-box .stats-box-single:nth-of-type(2) {
+	background: #E05C4E;
+}
+
+.stats-box .stats-box-single:nth-of-type(3) {
+	background: #0091ea;
+}
+
+.stats-box-wrapper {
+	padding: 10px 20px;
+	text-align: left;
+	color: white;
+}
+
+.stats-box-wrapper h2 {
+	font-size: 28px;
+}
+
+.stats-box-wrapper p {
+	padding: 10px 0;
+	font-size: 26px;
 }
 
 /**Res**/ 
@@ -218,10 +291,6 @@ section.content-box {
         padding: 0;
     }
 
-    .menu-wrapper {
-        width: 200px;
-    }
-
     header.header-container {
         width: 100%;
         left: 0;
@@ -239,6 +308,16 @@ section.content-box {
     
     .user-pic-icon i {
         font-size: 35px;
+    }
+
+    .user-pic {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .user-pic img {
+        width: 100px;
+        height: 100px;
     }
 
     .user-name p {
