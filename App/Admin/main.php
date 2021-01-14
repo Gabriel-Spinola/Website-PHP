@@ -20,7 +20,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
-    <link rel="stylesheet" href="<?php echo INCLUDE_PATH_ADMIN ?>CSS/panel.css">
+    <link rel="stylesheet" href="<?php echo INCLUDE_PATH_ADMIN ?>CSS/dashboard.css">
     <link rel="stylesheet" href="<?php echo INCLUDE_PATH ?>Assets/Styles/css/all.css">
 
 </head>
@@ -60,7 +60,7 @@
 
 </aside><!--menu-->
 
-<header id="header-container">
+<header class="header-container">
 
     <div class="center">
 
@@ -82,9 +82,33 @@
 
 </header><!--#header-container#-->
 
-<main id="main-container">
+<main class="main-container">
 
+    <section class="content-box left w100">
 
+        
+
+    </section><!--content-box-->
+
+    <!-- <section class="content-box left w100">
+
+        
+
+    </section>
+
+    <section class="content-box left w50">
+
+        
+
+    </section>
+
+    <section class="content-box right w50">
+
+        
+
+    </section>content-box -->
+
+    <div class="clear"></div>
 
 </main><!--#main-container#-->
 

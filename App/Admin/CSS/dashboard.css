@@ -22,6 +22,23 @@ body {
     margin: 0 auto;
 }
 
+.w100 {
+    width: 100%;
+}
+
+.w50 {
+    width: 48%;
+    background: red !important;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
 /**Login Page**/
 
 section.login-box {
@@ -81,8 +98,9 @@ section.login-box input[type="submit"] {
 
 /**Main**/
 
-header#header-container {
-    float: left;
+header.header-container {
+    position: relative;
+    left: 300px;
     width: calc(100% - 300px);
     background: #1fc098;
     padding: 10px 0;
@@ -99,9 +117,12 @@ div.logout a {
 }
 
 aside.menu {
+    position: fixed;
     overflow-y: auto;
     height: 100%;
     float: left;
+    left: 0;
+    top: 0;
     padding: 10px;
     background-color: red;
     width: 300px;
@@ -148,3 +169,81 @@ aside.menu {
     color: white;
     font-size: 16px;
 }
+
+/**Main Content**/
+
+main.main-container {
+    width: calc(100% - 300px);
+    position: relative;
+    left: 300px;
+    padding: 10px;
+}
+
+section.content-box {
+    background: white;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/**Res**/ 
+
+@media screen and (max-width: 1024px) {
+    aside.menu {
+        width: 250px;
+    }
+
+    header.header-container {
+        left: 250px;
+        width: calc(100% - 250px)
+    }
+
+    main.main-container {
+        width: calc(100% - 250px);
+        left: 250px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    aside.menu {
+        display: none;
+    }
+
+    header.header-container {
+        width: 100%;
+        left: 0;
+    }
+
+    main.main-container {
+        left: 0;
+        width: 100%;
+    }
+}
+
+/* @media screen and (max-width: 600px) {
+    aside.menu {
+        width: 180px;
+    }
+
+    header.header-container {
+        left: 180px;
+        width: calc(100% - 180px)
+    }
+
+    main.main-container {
+        width: calc(100% - 180px);
+        left: 180px;
+    }
+
+    .user-pic-icon {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .user-pic-icon i {
+        font-size: 35px;
+    }
+
+    .user-name p {
+        font-size: 14px;
+    }
+} */
