@@ -11,6 +11,19 @@ body {
     background: rgba(225, 225, 225)
 }
 
+/**Boot**/
+
+.clear {
+    clear: both;
+}
+
+.center {
+    padding: 0 2%;
+    margin: 0 auto;
+}
+
+/**Login Page**/
+
 section.login-box {
     position: absolute;
     max-width: 600px;
@@ -64,4 +77,30 @@ section.login-box input[type="submit"] {
     font-size: 18px;
     padding: 10px 2%;
     top: 20px;
+}
+
+/**Main**/
+
+aside {
+    height: 100%;
+    float: left;
+    background-color: red;
+    width: 300px;
+}
+
+header#header-container {
+    float: left;
+    width: calc(100% - 300px);
+    background: #1fc098;
+    padding: 10px 0;
+}
+
+/* !-clear- */
+div.logout {
+    float: right;
+}
+
+div.logout a {
+    text-decoration: none;
+    color: #fff;
 }

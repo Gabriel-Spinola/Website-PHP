@@ -9,80 +9,80 @@
 <!DOCTYPE html>
 <html>
 
-    <head>
+<head>
 
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-        <title>DashBoard</title>
+    <title>DashBoard</title>
 
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
-        <link rel="stylesheet" href="<?php echo INCLUDE_PATH_ADMIN ?>CSS/panel.css">
-        <link rel="stylesheet" href="<?php echo INCLUDE_PATH ?>Assets/Styles/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="<?php echo INCLUDE_PATH_ADMIN ?>CSS/panel.css">
+    <link rel="stylesheet" href="<?php echo INCLUDE_PATH ?>Assets/Styles/css/all.css">
 
-    </head>
+</head>
 
-    <body>
-        
-        <main id="main-container">
+<body>
+    
+    <main id="main-container">
 
-            <section class="login-box">
+        <section class="login-box">
 
-                <h2>Login!</h2> 
+            <h2>Login!</h2> 
 
-                <form method="post">
-        
-                    <input type="text" name="user" placeholder="user..." required>
-                    <input type="password" name="password" placeholder="password..." required>
-                    <input type="submit" name="submit">
+            <form method="post">
+    
+                <input type="text" name="user" placeholder="user..." required>
+                <input type="password" name="password" placeholder="password..." required>
+                <input type="submit" name="submit">
 
-                </form>
+            </form>
 
-                <?php if (isset($_POST['submit'])): ?>
+            <?php if (isset($_POST['submit'])): ?>
 
-                    <?php
+                <?php
 
-                        $user = $_POST['user'];
-                        $password = $_POST['password'];
+                    $user = $_POST['user'];
+                    $password = $_POST['password'];
 
-                        $query = $MySql -> connect() -> prepare(
-                           "SELECT * FROM `tb_admin.users`
-                            WHERE user = ? AND `password` = ?;"
-                        ); 
-                        $query -> execute([
-                            $user, $password
-                        ]);
+                    $query = $MySql -> connect() -> prepare(
+                        "SELECT * FROM `tb_admin.users`
+                        WHERE user = ? AND `password` = ?;"
+                    ); 
+                    $query -> execute([
+                        $user, $password
+                    ]);
+                
+                ?>
+
+                <!-- ? logged : failed -->
+                <?php if ($query -> rowCount() == 1):
+
+                    $_SESSION['logged'] = true;
+                    $_SESSION['user'] = $user;
+                    $_SESSION['password'] = $password;
+
+                    header('Location: ' . INCLUDE_PATH_ADMIN);
+                    die(); 
+
+                ?>
+                <?php else: ?>
                     
-                    ?>
+                    <div class="error-box">Incorrect username or password. <i class="fa fa-times"></i></div>
 
-                    <!-- ? logged : failed -->
-                    <?php if ($query -> rowCount() == 1):
+                <?php endif ?>
 
-                        $_SESSION['logged'] = true;
-                        $_SESSION['user'] = $user;
-                        $_SESSION['password'] = $password;
+            <?php endif ?> 
 
-                        header('Location: ' . INCLUDE_PATH_ADMIN);
-                        die(); 
+        </section><!-- login-box -->
 
-                    ?>
-                    <?php else: ?>
-                        
-                        <div class="error-box">Incorrect username or password. <i class="fa fa-times"></i></div>
+    </main><!--#main-container#-->
 
-                    <?php endif ?>
+    <script src="" async defer></script>
 
-                <?php endif ?> 
-
-            </section><!-- login-box -->
-
-        </main><!--#main-container#-->
-
-        <script src="" async defer></script>
-
-    </body>
+</body>
 
 </html>
