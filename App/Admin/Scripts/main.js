@@ -33,7 +33,31 @@ $(function () {
                     'left' : `${asideMenuSize}px`
                 }, () => {
                     openMenu = true
+
+                    if (windowSize > 765) location.reload()
                 })
+            }
+        })
+
+        $(window).resize(() => {
+            location.reload()
+
+            if (windowSize <= 768) {
+                $('aside.menu').css('width', '0').css('padding', '0')
+
+                $('.main-container, .header-container').css('width', '100%').css(
+                    'left', '0'
+                )
+
+                openMenu = false
+            } else {
+                openMenu = true
+
+                $('main-container').css('width', 'calc(100% - 250px)').css(
+                    'left', '250px'
+                )
+
+                $('aside.menu').css('width', '250px').css('padding', '10px', '0')
             }
         })
     }
