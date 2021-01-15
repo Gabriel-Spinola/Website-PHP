@@ -6,7 +6,7 @@
 */
 
 interface DBConnectionI {
-    public function connect();
+    public function connect(): PDO;
 }
 
 class MySqlDataBase implements DBConnectionI {
