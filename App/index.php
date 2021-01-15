@@ -153,7 +153,6 @@
 	<script src="<?php echo INCLUDE_PATH ?>Scripts/constants.js"></script>
 	<script src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyDHPNQxozOzQSZ-djvWGOBUsHkBUoT_qH4'></script>
 	<script src="<?php echo INCLUDE_PATH ?>Scripts/slider.js"></script>
-	<script src="<?php echo INCLUDE_PATH ?>Scripts/specialtiesAnimation.js"></script>
 	<script src="<?php echo INCLUDE_PATH ?>Scripts/main.js"></script>
 	<script src="<?php echo INCLUDE_PATH ?>Scripts/forms.js"></script>
 	<script src="<?php echo INCLUDE_PATH ?>Scripts/map.js"></script>
