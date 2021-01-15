@@ -1,22 +1,22 @@
 $(function () {
-	let atual = -1
-	let maximo = $('.specialtie-box').length - 1
+	let actual = -1
+	let maximum = $('.specialty-box').length - 1
 	let timer
-	let animacaoDelay = 0.8
+	let animationDelay = 0.8
 
-	$('.specialtie-box').hide()
+	$('.specialty-box').hide()
 
-	timer = setInterval(Animation, animacaoDelay * 1000)
+	timer = setInterval(Animation, animationDelay * 1000)
 
 	function Animation() {
-		atual++
+		actual++ 
 
-		if (atual > maximo) {
+		if (actual > maximum) {
 			clearInterval(timer)
 
 			return false
 		}
 
-		$('.specialtie-box').eq(atual).fadeIn()
+		$('.specialty-box').eq(actual).fadeIn()
 	}
 })

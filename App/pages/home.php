@@ -62,32 +62,32 @@
 
 		<h2 class="title">Specialties</h2>
 
-		<article class="w33 left specialtie-box">
+		<article class="w33 left specialty-box">
 			
 			<h3><i class="fab fa-css3-alt"></i></h3>
 			<h4>CSS3</h4>
 
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
 
-		</article><!--specialtie-box-->
+		</article><!--specialty-box-->
 
-		<article class="w33 left specialtie-box">
+		<article class="w33 left specialty-box">
 
 			<h3><i class="fab fa-html5"></i></h3>
 			<h4>HTML 5</h4>
 
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
 
-		</article><!--specialtie-box-->
+		</article><!--specialty-box-->
 
-		<article class="w33 left specialtie-box">
+		<article class="w33 left specialty-box">
 
 			<h3><i class="fab fa-js-square"></i></h3>
 			<h4>Javascript</h4>
 
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
 
-		</article><!--specialtie-box-->
+		</article><!--specialty-box-->
 
 		<div class="clear"></div><!--clear-->
 

@@ -176,24 +176,24 @@ section.specialties h2.title {
     color: #999;
 }
 
-.specialtie-box {
+.specialty-box {
     margin: 40px 0;
     padding: 0 30px;
     text-align: center;
 }
 
-.specialtie-box h3 {
+.specialty-box h3 {
     color: #404580;
     font-size: 40px;
 }
 
-.specialtie-box h4 {
+.specialty-box h4 {
     font-weight: 300;
     font-size: 25px;
     color: #BABABA;
 }
 
-.specialtie-box p {
+.specialty-box p {
     color: #444;
     font-size: 15px;
     margin-top: 10px;
@@ -447,7 +447,7 @@ footer.down-footer {
         padding: 20px;
     }
 
-    .specialtie-box {
+    .specialty-box {
         padding: 40px 20px;
         margin: 0;
     }

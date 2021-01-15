@@ -13,10 +13,8 @@ $(function () {
 		for (let i in maxSlide + 1) {
 			var content = $('.bullets').html()
 
-			if (i == 0)
-				content += '<span class="active-slider"></span>'
-			else
-				content += '<span></span>'
+			if (i == 0) content += '<span class="active-slider"></span>'
+			else content += '<span></span>'
 				
 			$('.bullets').html(content)
 		}

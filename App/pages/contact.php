@@ -23,14 +23,6 @@
 
 		</form>
 
-		<div class="mail-bug">
-		<?php
-		
-			
-
-		?>
-		</div>
-
 	</div><!--center-->
 
 </div><!--contact-container-->
