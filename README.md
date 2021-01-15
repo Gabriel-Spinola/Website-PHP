@@ -12,7 +12,7 @@
   You will need the [jQuery library](https://jquery.com/), the [Google Maps API](https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyDHPNQxozOzQSZ-djvWGOBUsHkBUoT_qH4),
   the [MySql(phpMyAdmin)](https://github.com/Gabriel-Spinola/Website-PHP/blob/main/DataBase/tb_phpwebproject.sql) Database, and the [PHPMailer](https://github.com/PHPMailer/PHPMailer).
   
-  To access the Dashboard, you will need to write "Admin" in the URL and "admin" in the username and password
+  To access the Dashboard, you will need to write "Admin" in the URL and "admin" in the username and password.
 
 <hr>
 
