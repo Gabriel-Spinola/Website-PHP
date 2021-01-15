@@ -9,7 +9,7 @@ class DashBoard {
         session_destroy();
 
         header('Location:' . INCLUDE_PATH_ADMIN);
-        die();
+        die;
     }
 }
 
