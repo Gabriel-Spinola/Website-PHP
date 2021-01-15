@@ -71,7 +71,7 @@
                     $_SESSION['img'] = $info['img'];
 
                     header('Location: ' . INCLUDE_PATH_ADMIN);
-                    die(); 
+                    die; 
 
                 ?>
                 <?php else: ?>
