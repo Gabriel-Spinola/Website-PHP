@@ -48,12 +48,16 @@
 
             </thead>
 
-            <tbody class="col">
+            <?php for($i = 0; $i < 10; $i++): ?>
 
-                <td>199.199.199.199</td>
-                <td>18/01/2021 6:46PM</td>
+                <tbody class="col">
 
-            </tbody>
+                    <td>199.199.199.199</td>
+                    <td>18/01/2021 6:46PM</td>
+
+                </tbody>
+
+            <?php endfor ?>
 
         </table>
 

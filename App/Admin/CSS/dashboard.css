@@ -209,8 +209,6 @@ aside.menu {
 }
 
 .menu-items h2 {
-    /* border-top: 3px solid #4b7880;
-    border-bottom: 3px solid #4b7880; */
     background: #2f3d42;
     color: white;
     padding: 8px;
@@ -290,17 +288,13 @@ table.users-table {
 }
 
 .col th {
-    padding: 0 150px;
     border-bottom: 2px solid #333;
 }
 
 .col td {
-    padding: 0 250px;
+    padding: 10px 0;
+    text-align: center;
     border-bottom: 2px solid #333;  
-}
-
-.col td:nth-of-type(2) {
-    padding: 0 250px;
 }
 
 /**Res**/ 
