@@ -110,14 +110,28 @@ header.header-container {
     padding: 10px 0;
 }
 
-/* !-clear- */
-div.logout {
+ul.navbar {
+    list-style: none;
+}
+
+li.logout-btn {
     float: right;
 }
 
-div.logout a {
+li.logout-btn a {
     text-decoration: none;
     color: #fff;
+}
+
+/* !-clear- */
+li.home-btn {
+    float: right;
+}
+
+li.home-btn a {
+    text-decoration: none;
+    color: #fff;
+    padding: 0 20px;
 }
 
 aside.menu {

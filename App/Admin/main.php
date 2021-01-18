@@ -47,7 +47,7 @@
 
             </div><!--user-pic-->
 
-        <?php endif ?>
+        <?php endif ?><!--?user-pic?-->
 
         <div class="user-name">
 
@@ -83,17 +83,13 @@
 
     <div class="center">
 
-        <div class="menu-btn">
+        <ul class="navbar">
 
-            <i class="fa fa-bars"></i>
+            <li class="menu-btn"><i class="fa fa-bars"></i></li>
+            <li class="logout-btn"><a href="<?php echo INCLUDE_PATH_ADMIN ?>?logout">Logout <i class="fas fa-door-closed"></i></a></li>
+            <li class="home-btn"><a href="<?php echo INCLUDE_PATH_ADMIN ?>">Home <i class="fa fa-home" aria-hidden="true"></i></a></li>
 
-        </div><!--menu-btn-->
-
-        <div class="logout">
-
-            <a href="<?php echo INCLUDE_PATH_ADMIN ?>?logout">Logout <i class="fas fa-door-closed"></i></a>
-    
-        </div><!--logout-->
+        </ul>
 
     </div><!--center-->
 

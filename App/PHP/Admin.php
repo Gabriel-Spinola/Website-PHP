@@ -17,6 +17,7 @@ class DashBoard {
     # load pages
     public static function loadPage(): void {
         if ((isset($_GET['url']))) {
+            // Create an array for each slash/page
             $url = explode('/', $_GET['url']);
 
             // Include current page.
@@ -39,7 +40,7 @@ class Admin {
         $positions = [
             '0' => 'Normal',
             '1' => 'Sub Administrator',
-            '2' => 'Administrator'
+            '2' => 'Administrator' 
         ];
 
         return $positions[$positionId];
