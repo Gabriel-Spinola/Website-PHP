@@ -33,4 +33,32 @@
 
 </section><!--content-box-->
 
+<section class="content-box left w100">
+    
+    <div class="stats-box">
+
+        <h2><i class="fa fa-user" aria-hidden="true"></i> DashBoard - <?php print COMPANY_NAME ?></h2>
+
+        <table class="users-table">
+
+            <thead class="col">
+
+                <th>IP</th>
+                <th>Last Action</th>
+
+            </thead>
+
+            <tbody class="col">
+
+                <td>199.199.199.199</td>
+                <td>18/01/2021 6:46PM</td>
+
+            </tbody>
+
+        </table>
+
+    </div><!--stats-box-->
+
+</section><!--content-box-->
+
 <div class="clear"></div> 
