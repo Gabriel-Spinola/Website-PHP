@@ -1,6 +1,6 @@
 <?php 
 
-    require '../PHP/DBConnect.php';
+    require '../PHP/MySqlDataBase.php';
 
     $MySql = new MySqlDataBase; 
 

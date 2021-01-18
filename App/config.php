@@ -5,7 +5,13 @@
 
 ?>
 
-<?php #constants
+<?php # Default
+
+	date_default_timezone_set('America/Sao_Paulo');
+
+?>
+
+<?php # Constants
 	
 	session_start();
 

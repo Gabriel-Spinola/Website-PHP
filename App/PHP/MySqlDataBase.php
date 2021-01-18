@@ -1,15 +1,10 @@
 <?php
 
-/**
- * Data base Connection using 
- * DIP = Dependency Inversion Principle
-*/
-
-interface DBConnectionI {
+interface DBConnectionInterface {
     public function connect(): PDO;
 }
 
-class MySqlDataBase implements DBConnectionI {
+class MySqlDataBase implements DBConnectionInterface {
     private $pdo;
 
     public function connect(): PDO {

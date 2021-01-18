@@ -1,6 +1,11 @@
 <?php 
 
-	include 'config.php';
+	require 'config.php';
+	require 'PHP/WebSite.php';
+
+	$MySql = new MySqlDataBase;
+	$control = new Website($MySql);
+	$control -> updateOnlineUsers();
 
 ?>
 
