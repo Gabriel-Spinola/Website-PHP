@@ -1,10 +1,8 @@
 <?php 
 
 	require 'config.php';
-	require 'PHP/WebSite.php';
 
-	$MySql = new MySqlDataBase;
-	$control = new Website($MySql);
+	$control = new Website(new MySqlDataBase);
 	$control -> updateOnlineUsers();
 
 ?>

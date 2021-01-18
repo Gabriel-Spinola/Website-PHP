@@ -8,22 +8,39 @@ class Website {
     ) { }
 
     public function updateOnlineUsers(): void {
-        // if (isset($_SESSION['online'])) {
-            // $token = $_SESSION['online']; 
-            
-            $date = date('Y-m-d H:i:s');
+        $dateTime = date('Y-m-d H:i:s');
 
+        if (isset($_SESSION['online'])) {
+            // Set token
+            $token = $_SESSION['online']; 
+            
             $query = $this -> DBConnection -> connect() -> prepare(
-                "SELECT * FROM `tb_admin.users`;"
+               "UPDATE `tb_admin.users_online`
+                SET last_action = ? WHERE token = ?;"
             );
 
-            $query -> execute();
+            $query -> execute([
+                $dateTime, $token
+            ]);
+        } else {
+            // Generate a random token
+            $_SESSION['online'] = uniqid();
+            
+            // Set token
+            $token = $_SESSION['online'];
 
-            $data = $query -> fetchAll();
+            // Get Ip
+            $ip = $_SERVER['REMOTE_ADDR'];
 
-            foreach ($data as $key => $row) {
-                echo $row['user'];
-            }
-        // }
+            $query = $this -> DBConnection -> connect() -> prepare(
+               "INSERT INTO `tb_admin.users_online` 
+                VALUES (null, ?, ?, ?);"
+            );
+ 
+            $query -> execute([
+                $ip, $dateTime,
+                $token
+            ]);
+        }
     }
 }
