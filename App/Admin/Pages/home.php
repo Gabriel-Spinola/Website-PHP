@@ -1,3 +1,10 @@
+<?php 
+
+    $Website = new Website(new MySqlDataBase);
+    $onlineUsers = $Website -> getOnlineUsersList();
+
+?>
+
 <section class="content-box left w100">
 
     <div class="stats-box">
@@ -9,7 +16,7 @@
             <div class="stats-box-single">
 
                 <h2>Online Users</h2>
-                <p>10</p>
+                <p><?php print count($onlineUsers) ?></p>
 
             </div><!--stats-box-single-->
 
@@ -48,16 +55,18 @@
 
             </thead>
 
-            <?php for($i = 0; $i < 10; $i++): ?>
+            <?php foreach($onlineUsers as $key => $row): ?>
 
                 <tbody class="col">
 
-                    <td>199.199.199.199</td>
-                    <td>18/01/2021 6:46PM</td>
+                    <td><?php print $row['ip'] ?></td>
+
+                    <!--?convert the date/time method?-->
+                    <td><?php print date('d/m/Y H:i:s', strtotime($row['last_action'])) ?></td>
 
                 </tbody>
 
-            <?php endfor ?>
+            <?php endforeach ?>
 
         </table>
 

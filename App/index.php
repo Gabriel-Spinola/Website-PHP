@@ -2,8 +2,8 @@
 
 	require 'config.php';
 
-	$control = new Website(new MySqlDataBase);
-	$control -> updateOnlineUsers();
+	$Website = new Website(new MySqlDataBase);
+	$Website -> updateOnlineUsers();
 
 ?>
 
