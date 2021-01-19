@@ -43,8 +43,8 @@
 
                     updateUserInfoView(
                         response: $EditUser -> updateUserInfo($name, $password, $image),
-                        SucMessage: 'Your account has been successfully updated i!',
-                        ErrMessage: 'An Error has occurred and your account cannot be updated i!'
+                        SucMessage: 'Your account has been successfully updated!',
+                        ErrMessage: 'An Error has occurred and your account cannot be updated!'
                     ); ?>
 
                     <a href="<?php echo INCLUDE_PATH_ADMIN ?>?logout">To Save your changes, Click here</a>
