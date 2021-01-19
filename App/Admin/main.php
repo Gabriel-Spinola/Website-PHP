@@ -1,7 +1,7 @@
 <?php
 
     if(isset($_GET['logout'])) {
-        DashBoard :: logout();
+        LoginManager :: logout();
     }
 
 ?>
@@ -69,7 +69,7 @@
         <a href="">List Slides</a>
 
         <h2>DashBoard Management</h2>
-        <a href="">Edit User</a>
+        <a href="<?php echo INCLUDE_PATH_ADMIN ?>editUser">Edit User</a>
         <a href="">Add User</a>
 
         <h2>General Config</h2>

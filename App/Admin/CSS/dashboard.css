@@ -67,8 +67,8 @@ section.login-box h2 {
     color: #29c09a;
 }
 
-section.login-box input[type="text"],
-section.login-box input[type="password"] {
+section.login-box input[ type = text ],
+section.login-box input[ type = password ] {
     width: 100%;
     height: 45px;
     border: 1px solid #ccc;
@@ -76,7 +76,7 @@ section.login-box input[type="password"] {
     margin-top: 5px;
 }
 
-section.login-box input[type="submit"] {
+section.login-box input[ type = submit ] {
     width: 100px;
     height: 40px;
     cursor: pointer;
@@ -295,6 +295,67 @@ table.users-table {
     padding: 10px 0;
     text-align: center;
     border-bottom: 2px solid #333;  
+}
+
+/**edit-user section**/
+
+.content-box form#edit-user-form {
+    margin: 20px 0;
+}
+
+.content-box form#edit-user-form label {
+    display: block;
+}
+
+.content-box form#edit-user-form input[ type = text ],
+.content-box form#edit-user-form input[ type = password ] {
+    font-size: 16px;
+    width: 100%;
+    height: 40px;
+    padding-left: 8px;
+}
+
+.content-box form#edit-user-form input[ type = file ] {
+    border: 1px solid #ccc;
+    width: 100%;
+    padding: 8px;
+}
+
+.content-box form#edit-user-form input[ type = submit ] {
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+    margin-top: 8px;
+    font-size: 16px;
+    background: #22d1a5;
+    color: white;
+    border: 1px solid #333;
+}
+ 
+form#edit-user-form .form-group {
+    margin: 10px 0;
+}
+
+/**Alerts**/
+
+.alert-box {
+    width: 100%;
+    padding: 8px 0;
+    text-align: center;
+}
+
+.success {
+    background: #00e676;
+    border : 3px solid #77e96d;
+    color: white;
+    padding: 5px 0;
+}
+
+.error {
+    background: #e96d6d;
+    border : 3px solid #f73333;
+    color: white;
+    padding: 5px 0;
 }
 
 /**Res**/ 

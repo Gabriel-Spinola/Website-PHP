@@ -63,12 +63,7 @@
 
                     $info = $query -> fetch();
 
-                    $_SESSION['logged'] = true;
-                    $_SESSION['user'] = $user;
-                    $_SESSION['password'] = $password;
-                    $_SESSION['position'] = $info['position'];
-                    $_SESSION['name'] = $info['name'];
-                    $_SESSION['img'] = $info['img'];
+                    LoginManager :: initSession($info, $user, $password);
 
                     header('Location: ' . INCLUDE_PATH_ADMIN);
                     die; 
@@ -76,7 +71,7 @@
                 ?>
                 <?php else: ?>
                     
-                    <div class="error-box">Incorrect username or password. <i class="fa fa-times"></i></div>
+                    <alert class="error">Incorrect username or password. <i class="fa fa-times"></i></alert>
 
                 <?php endif ?>
 

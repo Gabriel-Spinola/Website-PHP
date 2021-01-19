@@ -1,6 +1,6 @@
 <?php
 
-class DashBoard {
+class LoginManager {
     # check if is logged in
     public static function isLoggedIn(): bool {
         return isset($_SESSION['logged']);
@@ -14,6 +14,20 @@ class DashBoard {
         die;
     }
 
+    public static function initSession(
+        array $info, string $user,
+        string $password
+    ): void {
+        $_SESSION['logged'] = true;
+        $_SESSION['user'] = $user;
+        $_SESSION['password'] = $password;
+        $_SESSION['position'] = $info['position'];
+        $_SESSION['name'] = $info['name'];
+        $_SESSION['img'] = $info['img'];
+    }
+}
+
+class DashBoard {
     # load pages
     public static function loadPage(): void {
         if ((isset($_GET['url']))) {
@@ -31,7 +45,7 @@ class DashBoard {
         } else {
             include '../Admin/Pages/home.php';
         }
-    }
+    }  
 }
 
 class Admin {
@@ -46,3 +60,39 @@ class Admin {
         return $positions[$positionId];
     }
 }
+
+?>
+
+<?php 
+
+    class EditUser {
+        public static function response($response, $message): void { ?>
+
+            <?php if ($response == 'success'): ?>
+                
+                <div class="alert-box">
+
+                    <div class="success"><?php print $message ?></div>
+
+                </div><!--alert-box-->
+
+            <?php elseif ($response == 'error'): ?>
+
+                <div class="alert-box">
+
+                    <div class="error"><?php print $message ?></div>
+
+                </div><!--alert-box-->
+
+            <?php else: 
+                
+                throw new Exception('Incorrect Response')
+                
+            ?>
+            
+            <?php endif ?>
+
+        <?php }
+    } 
+
+?>
