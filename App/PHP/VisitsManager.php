@@ -5,6 +5,7 @@ class VisitsManager {
         private DBConnectionInterface $DBConnection
     ) { }
 
+    # registers and count the visitors
     public function countUsersVisits(): void {
         setcookie('visit', 'true', time() - 1);
 
@@ -23,6 +24,7 @@ class VisitsManager {
         }
     }
 
+    # return the number of visits over the lifetime of the website
     public function getVisitsList(): int {
         $query = $this -> DBConnection -> connect() -> prepare(
             "SELECT * FROM `tb_admin.visits`"
@@ -33,9 +35,10 @@ class VisitsManager {
         return $query -> rowCount();
     }
 
+    # return the number of visits in the current day
     public function getDiaryVisitsList(): int {
         $query = $this -> DBConnection -> connect() -> prepare(
-            "SELECT * FROM `tb_admin.visits`
+           "SELECT * FROM `tb_admin.visits`
             WHERE `date` = ?"
         );
 
