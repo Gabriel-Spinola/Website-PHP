@@ -1,36 +1,12 @@
 <?php
 
-require 'MySqlDataBase.php';
-
-class Website {
+class UserManager {
     private $dateTime;
 
     public function __construct(
         private DBConnectionInterface $DBConnection
     ) {
         $this -> dateTime = date('Y-m-d H:i:s');
-    }
-
-    private function addUser() {
-        // Generate a random token
-        $_SESSION['online'] = uniqid();
-        
-        // Set token
-        $token = $_SESSION['online'];
-
-        // Get Ip
-        $ip = $_SERVER['REMOTE_ADDR'];
-
-        // Insert user info
-        $query = $this -> DBConnection -> connect() -> prepare(
-           "INSERT INTO `tb_admin.users_online` 
-            VALUES (null, ?, ?, ?);"
-        );
-
-        $query -> execute([
-            $ip, $this -> dateTime,
-            $token
-        ]);
     }
 
     public function updateOnlineUsers(): void {
@@ -66,7 +42,7 @@ class Website {
         }
     }
 
-    public function getOnlineUsersList() {
+    public function getOnlineUsersList(): array {
         $this -> deleteInactiveUsers();
 
         $query = $this -> DBConnection -> connect() -> prepare(
@@ -78,7 +54,29 @@ class Website {
         return $query -> fetchAll();
     }
 
-    private function deleteInactiveUsers() {
+    private function addUser(): void {
+        // Generate a random token
+        $_SESSION['online'] = uniqid();
+        
+        // Set token
+        $token = $_SESSION['online'];
+
+        // Get Ip
+        $ip = $_SERVER['REMOTE_ADDR'];
+
+        // Insert user info
+        $query = $this -> DBConnection -> connect() -> prepare(
+           "INSERT INTO `tb_admin.users_online` 
+            VALUES (null, ?, ?, ?);"
+        );
+
+        $query -> execute([
+            $ip, $this -> dateTime,
+            $token
+        ]);
+    }
+
+    private function deleteInactiveUsers(): void {
         $dateTime = $this -> dateTime;
 
         // For each 30 minutes past if a users is inactive his register is deleted

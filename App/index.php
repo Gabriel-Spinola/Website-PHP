@@ -2,8 +2,10 @@
 
 	require 'config.php';
 
-	$Website = new Website(new MySqlDataBase);
-	$Website -> updateOnlineUsers();
+	$UserManager = new UserManager(new MySqlDataBase);
+	$VisitsManager = new VisitsManager(new MySqlDataBase);
+	$UserManager -> updateOnlineUsers();
+	$totalOfVisitors = $VisitsManager -> countUsersVisits();
 
 ?>
 

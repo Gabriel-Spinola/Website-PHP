@@ -1,7 +1,8 @@
 <?php 
 
-    $Website = new Website(new MySqlDataBase);
-    $onlineUsers = $Website -> getOnlineUsersList();
+    $UserManager = new UserManager(new MySqlDataBase);
+    $VisitsManager = new VisitsManager(new MySqlDataBase);
+    $onlineUsers = $UserManager -> getOnlineUsersList();
 
 ?>
 
@@ -23,14 +24,14 @@
             <div class="stats-box-single">
 
                 <h2>Visits Total</h2>
-                <p>100</p>
+                <p><?php print $VisitsManager -> getVisitsList() ?></p>
 
             </div><!--stats-box-single-->
 
             <div class="stats-box-single">
 
                 <h2>Today's Visits</h2>
-                <p>3</p>
+                <p><?php print $VisitsManager -> getDiaryVisitsList() ?></p>
 
             </div><!--stats-box-single-->
 
