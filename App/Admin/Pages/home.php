@@ -1,8 +1,8 @@
 <?php 
 
-    $UserManager = new UserManager(new MySqlDataBase);
+    $UserStatsManager = new UserStatsManager(new MySqlDataBase);
     $VisitsManager = new VisitsManager(new MySqlDataBase);
-    $onlineUsers = $UserManager -> getOnlineUsersList();
+    $onlineUsers = $UserStatsManager -> getOnlineUsersList();
 
 ?>
 

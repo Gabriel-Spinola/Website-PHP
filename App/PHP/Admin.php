@@ -45,7 +45,41 @@ class DashBoard {
         } else {
             include '../Admin/Pages/home.php';
         }
-    }  
+    } 
+
+    public static function response($response, $message): void { ?>
+
+        <?php if ($response == 'success'): ?>
+            
+            <div class="alert-box">
+
+                <div class="success">
+                    <i class="fa fa-check" aria-hidden="true"></i> 
+                    <?php print $message ?>
+                </div>
+
+            </div><!--alert-box-->
+
+        <?php elseif ($response == 'error'): ?>
+
+            <div class="alert-box">
+
+                <div class="error">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                    <?php print $message ?>
+                </div>
+
+            </div><!--alert-box-->
+
+        <?php else: 
+            
+            throw new Exception('Incorrect Response')
+            
+        ?>
+        
+        <?php endif ?>
+
+    <?php }
 }
 
 class Admin {
@@ -60,45 +94,3 @@ class Admin {
         return $positions[$positionId];
     }
 }
-
-?>
-
-<?php 
-
-    class EditUser {
-        public static function response($response, $message): void { ?>
-
-            <?php if ($response == 'success'): ?>
-                
-                <div class="alert-box">
-
-                    <div class="success">
-                        <i class="fa fa-check" aria-hidden="true"></i> 
-                        <?php print $message ?>
-                    </div>
-
-                </div><!--alert-box-->
-
-            <?php elseif ($response == 'error'): ?>
-
-                <div class="alert-box">
-
-                    <div class="error">
-                        <i class="fa fa-times" aria-hidden="true"></i>
-                        <?php print $message ?>
-                    </div>
-
-                </div><!--alert-box-->
-
-            <?php else: 
-                
-                throw new Exception('Incorrect Response')
-                
-            ?>
-            
-            <?php endif ?>
-
-        <?php }
-    } 
-
-?>

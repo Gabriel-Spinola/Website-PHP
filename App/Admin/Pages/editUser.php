@@ -1,3 +1,9 @@
+<?php 
+
+    $UserManager = new UserManager(new MySqlDataBase);
+
+?>
+
 <section class="content-box">
 
     <h2><i class="fas fa-pen"></i> Edit User</h2>
@@ -7,7 +13,28 @@
         <?php
             
             if(isset($_POST['submit'])) {
-                EditUser :: response('success', 'Your account has been successfully updated!');
+                $name = $_POST['name'];
+                $password = $_POST['password'];
+                $actualImage = $_POST['actual-image'];
+                $image = $_FILES['image'];
+
+                if($image['name'] != '') {
+
+                } else {
+                    $image = $actualImage;
+
+                    if($UserManager -> updateUserInfo($name, $password, $image)) {
+                        DashBoard :: response(
+                            response: 'success',
+                            message: 'Your account has been successfully updated!'
+                        );
+                    } else {
+                        DashBoard :: response(
+                            response: 'error',
+                            message: 'An Error has occurred and your account cannot be updated!'
+                        );
+                    }
+                }
             }
 
         ?>
@@ -30,7 +57,7 @@
         
             <label>Image:</label>
             <input type="file" name="image">
-            <input type="hidden" name="actual-image" value="<?php print $_SESSION['img'] ?>">
+            <input type="hidden" name="actual-image" value="<?php echo $_SESSION['img'] ?>">
 
         </div><!--form-group-->
 
