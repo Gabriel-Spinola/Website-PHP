@@ -1,6 +1,19 @@
 <?php 
 
-    $UserManager = new UserManager(new MySqlDataBase);
+    $EditUser = new EditUser(new MySqlDataBase, new FilesManager);
+
+    function updateUserInfoView(bool $response, string $SucMessage, string $ErrMessage) {
+        if ($response)
+            DashBoard :: response(
+                response: 'success',
+                message: $SucMessage
+            );
+        else
+            DashBoard :: response(
+                response: 'error',
+                message: $ErrMessage
+            );
+    }
 
 ?>
 
@@ -12,30 +25,56 @@
 
         <?php
             
-            if(isset($_POST['submit'])) {
-                $name = $_POST['name'];
-                $password = $_POST['password'];
-                $actualImage = $_POST['actual-image'];
-                $image = $_FILES['image'];
+        if(isset($_POST['submit'])):
 
-                if($image['name'] != '') {
+            $name = $_POST['name'];
+            $password = $_POST['password'];
+            $actualImage = $_POST['actual-image'];
+            $image = $_FILES['image'];
 
-                } else {
-                    $image = $actualImage;
+            if($image['name'] != ''): ?>
 
-                    if($UserManager -> updateUserInfo($name, $password, $image)) {
-                        DashBoard :: response(
-                            response: 'success',
-                            message: 'Your account has been successfully updated!'
-                        );
-                    } else {
-                        DashBoard :: response(
-                            response: 'error',
-                            message: 'An Error has occurred and your account cannot be updated!'
-                        );
-                    }
-                }
-            }
+                <?php
+                
+                if ($EditUser -> isImageValid($image)):
+
+                    $EditUser -> deleteUserImage($actualImage);
+                    $image = $EditUser -> uploadUserImage($image);
+
+                    updateUserInfoView(
+                        response: $EditUser -> updateUserInfo($name, $password, $image),
+                        SucMessage: 'Your account has been successfully updated i!',
+                        ErrMessage: 'An Error has occurred and your account cannot be updated i!'
+                    ); ?>
+
+                    <a href="<?php echo INCLUDE_PATH_ADMIN ?>?logout">To Saver your changes please Click here</a>
+
+                <?php else:
+
+                    DashBoard :: response(
+                        'error',
+                        "The image format's not accepted"
+                    );
+                    
+                endif;
+
+            else:
+
+                $image = $actualImage;
+
+                updateUserInfoView(
+                    response: $EditUser -> updateUserInfo($name, $password, $image),
+                    SucMessage: 'Your account has been successfully updated!',
+                    ErrMessage: 'An Error has occurred and your account cannot be updated!'
+                );
+
+                ?>
+
+                <a href="<?php echo INCLUDE_PATH_ADMIN ?>?logout">To Saver your changes please Click here</a>
+
+            <?php endif;
+        
+        endif
 
         ?>
     

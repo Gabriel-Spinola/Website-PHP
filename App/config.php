@@ -18,6 +18,7 @@
 	// Path constants
 	const INCLUDE_PATH = "http://localhost:7000/GitHub/Comercial-Site-With-PHP/App/";
 	const INCLUDE_PATH_ADMIN = INCLUDE_PATH . "Admin/";
+	const BASE_DIR_DASHBOARD = __DIR__ . "/Admin";
 
 	// Database constants
 	const HOST = 'localhost';

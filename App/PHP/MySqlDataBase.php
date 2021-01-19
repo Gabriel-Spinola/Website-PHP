@@ -1,10 +1,10 @@
 <?php
 
-interface DBConnectionInterface {
+interface DBConnectionI {
     public function connect(): PDO;
 }
 
-class MySqlDataBase implements DBConnectionInterface {
+class MySqlDataBase implements DBConnectionI {
     private $pdo;
 
     public function connect(): PDO {

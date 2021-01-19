@@ -2,7 +2,7 @@
 
 class VisitsManager {
     public function __construct(
-        private DBConnectionInterface $DBConnection
+        private DBConnectionI $DBConnection
     ) { }
 
     # registers and count the visitors

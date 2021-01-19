@@ -4,7 +4,7 @@ class UserStatsManager {
     private $dateTime;
 
     public function __construct(
-        private DBConnectionInterface $DBConnection
+        private DBConnectionI $DBConnection
     ) {
         $this -> dateTime = date('Y-m-d H:i:s');
     }
