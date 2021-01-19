@@ -72,7 +72,10 @@ class Admin {
                 
                 <div class="alert-box">
 
-                    <div class="success"><?php print $message ?></div>
+                    <div class="success">
+                        <i class="fa fa-check" aria-hidden="true"></i> 
+                        <?php print $message ?>
+                    </div>
 
                 </div><!--alert-box-->
 
@@ -80,7 +83,10 @@ class Admin {
 
                 <div class="alert-box">
 
-                    <div class="error"><?php print $message ?></div>
+                    <div class="error">
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                        <?php print $message ?>
+                    </div>
 
                 </div><!--alert-box-->
 
