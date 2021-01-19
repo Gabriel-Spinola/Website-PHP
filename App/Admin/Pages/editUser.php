@@ -47,7 +47,7 @@
                         ErrMessage: 'An Error has occurred and your account cannot be updated i!'
                     ); ?>
 
-                    <a href="<?php echo INCLUDE_PATH_ADMIN ?>?logout">To Saver your changes please Click here</a>
+                    <a href="<?php echo INCLUDE_PATH_ADMIN ?>?logout">To Save your changes, Click here</a>
 
                 <?php else:
 
@@ -70,7 +70,7 @@
 
                 ?>
 
-                <a href="<?php echo INCLUDE_PATH_ADMIN ?>?logout">To Saver your changes please Click here</a>
+                <a href="<?php echo INCLUDE_PATH_ADMIN ?>?logout">To Save your changes, Click here</a>
 
             <?php endif;
         
