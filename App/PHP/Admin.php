@@ -45,7 +45,7 @@ class DashBoard {
         } else {
             include '../Admin/Pages/home.php';
         }
-    } 
+    }
 
     public static function response($response, $message): void { ?>
 

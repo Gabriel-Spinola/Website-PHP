@@ -4,6 +4,14 @@
         LoginManager :: logout();
     }
 
+    function selectedItem(string $item) {
+        $url = explode('/', @$_GET['url'])[0];
+
+        if($url == $item) {
+            print 'class="menu-active"';
+        }
+    }
+
 ?>
 
 <!DOCTYPE html>
@@ -61,19 +69,19 @@
     <div class="menu-items">
 
         <h2>Main Page Management</h2>
-        <a href="">Add Testimonials</a>
-        <a href="">Add Services</a>
-        <a href="">Add Slides</a>
-        <a href="">List Testimonials</a>
-        <a href="">List Services</a>
-        <a href="">List Slides</a>
+        <a <?php echo selectedItem('AddTestimonials') ?> href="">Add Testimonials</a>
+        <a <?php echo selectedItem('AddServices') ?> href="">Add Services</a>
+        <a <?php echo selectedItem('AddSlides') ?> href="">Add Slides</a>
+        <a <?php echo selectedItem('ListTestimonials') ?> href="">List Testimonials</a>
+        <a <?php echo selectedItem('ListServices') ?> href="">List Services</a>
+        <a <?php echo selectedItem('ListSlides') ?> href="">List Slides</a>
 
         <h2>DashBoard Management</h2>
-        <a href="<?php echo INCLUDE_PATH_ADMIN ?>editUser">Edit User</a>
-        <a href="">Add User</a>
+        <a <?php echo selectedItem('editUser') ?> href="<?php echo INCLUDE_PATH_ADMIN ?>editUser">Edit User</a>
+        <a <?php echo selectedItem('AddUser') ?> href="">Add User</a>
 
         <h2>General Config</h2>
-        <a href="">Edit</a>
+        <a <?php echo selectedItem('Edit') ?> href="">Edit</a>
         
     </div><!--menu-items-->
 

@@ -227,6 +227,14 @@ aside.menu {
     background-color: #4b7880;
 }
 
+.menu-items .menu-active {
+    background-color: #6fabb6; 
+}
+
+.menu-items .menu-active::before {
+    content: ;
+}
+
 /**Main Content**/
 
 main.main-container {
