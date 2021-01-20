@@ -1,6 +1,14 @@
 <?php
 
-interface FileToolsI {
+interface UploadFileI {
+    public function uploadFile(array $file): mixed;
+}
+
+interface DeleteFileI {
+    public function deleteFile(array $file): void;
+}
+
+interface FileToolsI extends UploadFileI, DeleteFileI {
     public function uploadFile(array $file): mixed;
     public function deleteFile(array $file): void;
 }

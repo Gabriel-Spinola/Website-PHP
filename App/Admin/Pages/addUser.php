@@ -1,3 +1,10 @@
+<?php
+
+    $AddUser = new AddUser(new MySqlDataBase);
+    $AddUserValidator = new AddUserValidator(new MySqlDataBase);
+
+?>
+
 <section class="content-box">
 
     <h2><i class="fa fa-user-plus" aria-hidden="true"></i> Add User</h2>
@@ -7,31 +14,35 @@
         <?php
         
         if(isset($_POST['submit'])) {
+            $user = $_POST['user'];
             $name = $_POST['name'];
             $password = $_POST['password'];
-            $actualImage = $_POST['actual-image'];
+            $position = $_POST['position'];
             $image = $_FILES['image'];
 
-            if($image['name'] != '') {
-                if ($EditUser -> isImageValid($image)): ?>
-
-                    <?php
-
-                        $EditUser -> deleteUserImage($actualImage);
-                        $image = $EditUser -> uploadUserImage($image);
-                        
-                    ?>
-
-                    <a href="<?php echo INCLUDE_PATH_ADMIN ?>?logout">To Save your changes, Click here</a>
-
-                <?php else:
-
-                    DashBoard :: response(
-                        'error',
-                        "The image format's not accepted"
-                    );
-                    
-                endif;
+            if ($AddUserValidator -> userExists($user)) {
+                DashBoard :: response(
+                    'error',
+                    "The User Already Exists"
+                );
+            } else {
+                if($image['name'] != '' && $position <= $_SESSION['position']) {
+                    if ($AddUser -> isImageValid($image)) {
+                        DashBoard :: response(
+                            'success',
+                            "Suc"
+                        );
+                    } else {
+                        DashBoard :: response(
+                            'error',
+                            "The image format's not accepted"
+                        );
+                    }
+                } else if ($position <= $_SESSION['position']) {
+                    echo 'a';
+                } else {
+                    die;
+                }
             }
         }
 
@@ -40,14 +51,14 @@
         <div class="form-group">
         
             <label>User:</label>
-            <input type="text" name="user" value="<?php print $_SESSION['user'] ?>" required>
+            <input type="text" name="user" required>
 
         </div><!--form-group-->
 
         <div class="form-group">
         
             <label>Password:</label>
-            <input type="password" name="password" value="<?php print $_SESSION['password'] ?>" required>
+            <input type="password" name="password" required>
 
         </div><!--form-group-->
          
@@ -55,14 +66,13 @@
         
             <label>Image:</label>
             <input type="file" name="image">
-            <input type="hidden" name="actual-image" value="<?php echo $_SESSION['img'] ?>">
 
         </div><!--form-group-->
 
         <div class="form-group">
         
             <label>Name:</label>
-            <input type="text" name="name" value="<?php print $_SESSION['name'] ?>" required>
+            <input type="text" name="name" required>
 
         </div><!--form-group-->
 
@@ -75,7 +85,7 @@
         <div class="form-group">
         
             <label>Position:</label>
-            <select name="position">
+            <select name="position" required>
             
                 <?php foreach(POSITIONS as $key => $row): ?>
 
@@ -93,7 +103,7 @@
 
         <div class="form-group">
              
-            <input type="submit" name="submit" value="Update User" required>
+            <input type="submit" name="submit" value="Update User">
 
         </div><!--form-group-->
     

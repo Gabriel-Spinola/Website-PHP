@@ -2,19 +2,6 @@
 
     $EditUser = new EditUser(new MySqlDataBase, new FilesManager);
 
-    function updateUserInfoView(bool $response, string $SucMessage, string $ErrMessage) {
-        if ($response)
-            DashBoard :: response(
-                response: 'success',
-                message: $SucMessage
-            );
-        else
-            DashBoard :: response(
-                response: 'error',
-                message: $ErrMessage
-            );
-    }
-
 ?>
 
 <section class="content-box">
@@ -41,7 +28,7 @@
                     $EditUser -> deleteUserImage($actualImage);
                     $image = $EditUser -> uploadUserImage($image);
 
-                    updateUserInfoView(
+                    DashBoard :: detailResponse(
                         response: $EditUser -> updateUserInfo($name, $password, $image),
                         SucMessage: 'Your account has been successfully updated!',
                         ErrMessage: 'An Error has occurred and your account cannot be updated!'
@@ -62,7 +49,7 @@
 
                 $image = $actualImage;
 
-                updateUserInfoView(
+                DashBoard :: detailResponse(
                     response: $EditUser -> updateUserInfo($name, $password, $image),
                     SucMessage: 'Your account has been successfully updated!',
                     ErrMessage: 'An Error has occurred and your account cannot be updated!'

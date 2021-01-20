@@ -80,6 +80,19 @@ class DashBoard {
         <?php endif ?>
 
     <?php }
+
+    static function detailResponse(bool $response, string $SucMessage, string $ErrMessage) {
+        if ($response)
+            self :: response(
+                response: 'success',
+                message: $SucMessage
+            );
+        else
+            self :: response(
+                response: 'error',
+                message: $ErrMessage
+            );
+    }
 }
 
 class Admin {

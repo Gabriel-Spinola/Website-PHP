@@ -1,9 +1,9 @@
 <?php
 
-require 'MySqlDataBase.php';
 require 'FileManager.php';
+require 'Validator.php';
 
-class EditUser {
+class EditUser extends ImageValidator  {
     public function __construct(
         private DBConnectionI $DBConnection,
         private FileToolsI $FileManager
@@ -24,16 +24,6 @@ class EditUser {
         } else {
             return false;
         }
-    }
-
-    public function isImageValid(array $img): bool {
-        // Convert Bytes to Kilobytes.
-        $size = intval($img['size'] / 1024);
-
-        return (
-            $img['type'] == 'image/jpeg' || $img['type'] == 'image/jpg' ||
-            $img['type'] == 'image/png' && $size < 300
-        );
     }
 
     public function uploadUserImage(mixed $image): string {
