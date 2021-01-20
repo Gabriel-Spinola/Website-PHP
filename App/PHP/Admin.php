@@ -85,12 +85,50 @@ class DashBoard {
 class Admin {
     # Get data from database
     public static function getPosition(int $positionId): string {
-        $positions = [
-            '0' => 'Normal',
-            '1' => 'Sub Administrator',
-            '2' => 'Administrator' 
-        ];
-
-        return $positions[$positionId];
+        return POSITIONS[$positionId];
     }
-}
+
+    public static function checkPermission() {
+        $url = @$_GET['url'];
+
+        switch ($url) {
+            case 'addTestimonials':
+                return $_SESSION['position'] >= POSITIONS_INT[0];
+            break;
+
+            case 'addServices':
+                return $_SESSION['position'] >= POSITIONS_INT[0];
+            break;
+
+            case 'addSlides':
+                return $_SESSION['position'] >= POSITIONS_INT[0];
+            break;
+
+            case 'listTestimonials':
+                return $_SESSION['position'] >= POSITIONS_INT[1];
+            break;
+            
+            case 'listServices':
+                return $_SESSION['position'] >= POSITIONS_INT[1];
+            break;
+
+            case 'listSlides':
+                return $_SESSION['position'] >= POSITIONS_INT[1];
+            break;
+
+            case 'editUser':
+                return $_SESSION['position'] >= POSITIONS_INT[0];
+            break;
+
+            case 'addUser':
+                return $_SESSION['position'] >= POSITIONS_INT[2];
+            break;
+
+            case 'edit':
+                return $_SESSION['position'] >= POSITIONS_INT[2];
+            break;
+
+            default: return true;
+        }
+    }
+} 

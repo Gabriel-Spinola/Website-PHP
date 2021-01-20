@@ -232,7 +232,7 @@ aside.menu {
 }
 
 .menu-items .menu-active::before {
-    content: ;
+    content: '> ';
 }
 
 /**Main Content**/

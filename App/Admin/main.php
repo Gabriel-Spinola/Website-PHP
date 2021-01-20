@@ -69,19 +69,21 @@
     <div class="menu-items">
 
         <h2>Main Page Management</h2>
-        <a <?php echo selectedItem('AddTestimonials') ?> href="">Add Testimonials</a>
-        <a <?php echo selectedItem('AddServices') ?> href="">Add Services</a>
-        <a <?php echo selectedItem('AddSlides') ?> href="">Add Slides</a>
-        <a <?php echo selectedItem('ListTestimonials') ?> href="">List Testimonials</a>
-        <a <?php echo selectedItem('ListServices') ?> href="">List Services</a>
-        <a <?php echo selectedItem('ListSlides') ?> href="">List Slides</a>
+        <a <?php echo selectedItem('addTestimonials') ?> href="">Add Testimonials</a>
+        <a <?php echo selectedItem('addServices') ?> href="">Add Services</a>
+        <a <?php echo selectedItem('addSlides') ?> href="">Add Slides</a>
+        <a <?php echo selectedItem('listTestimonials') ?> href="">List Testimonials</a>
+        <a <?php echo selectedItem('listServices') ?> href="">List Services</a>
+        <a <?php echo selectedItem('listSlides') ?> href="">List Slides</a>
 
         <h2>DashBoard Management</h2>
         <a <?php echo selectedItem('editUser') ?> href="<?php echo INCLUDE_PATH_ADMIN ?>editUser">Edit User</a>
-        <a <?php echo selectedItem('AddUser') ?> href="">Add User</a>
+        <a <?php
+            echo selectedItem('addUser');
+        ?> href="<?php echo INCLUDE_PATH_ADMIN ?>addUser">Add User</a>
 
         <h2>General Config</h2>
-        <a <?php echo selectedItem('Edit') ?> href="">Edit</a>
+        <a <?php echo selectedItem('edit') ?> href="">Edit</a>
         
     </div><!--menu-items-->
 
@@ -107,7 +109,12 @@
 
 <main class="main-container">
 
-    <?php DashBoard :: loadPage() ?>
+    <?php
+
+        if (Admin :: checkPermission()) DashBoard :: loadPage(); 
+        else DashBoard :: response('error', 'You are not allowed to access this page');
+
+    ?>
 
 </main><!--#main-container#-->
 

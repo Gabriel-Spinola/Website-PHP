@@ -29,6 +29,15 @@
 	// Base Info constants
 	const COMPANY_NAME = 'Company Name';
 
+	// Positions
+	const POSITIONS = [
+		'0' => 'Normal',
+        '1' => 'Sub Administrator',
+        '2' => 'Administrator',
+	];
+
+	const POSITIONS_INT = [0, 1, 2,];
+
 ?>
 
 <?php # Autoload
