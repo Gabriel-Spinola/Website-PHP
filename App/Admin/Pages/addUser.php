@@ -110,7 +110,7 @@
 
         <div class="form-group">
              
-            <input type="submit" name="submit" value="Update User">
+            <input type="submit" name="submit" value="Add User">
 
         </div><!--form-group-->
     

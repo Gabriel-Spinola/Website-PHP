@@ -15,10 +15,13 @@ interface FileToolsI extends UploadFileI, DeleteFileI {
 
 class FilesManager implements FileToolsI {
     public function uploadFile(array $file): mixed {
-        if (move_uploaded_file(
-            $file['tmp_name'],
-            BASE_DIR_DASHBOARD . '/Uploads/' . $file['name']
-        )) {
+        // $fileFormat[0] = fileName, $fileFormat[1] = file format.
+        $fileFormat = explode('.', $file['name']);
+
+        // Create a unique if for the file (solving overwriting problems)
+        $imageId = uniqid() . '.' . $fileFormat[count($fileFormat) - 1];
+
+        if (move_uploaded_file($file['tmp_name'], BASE_DIR_DASHBOARD . '/Uploads/' . $imageId)) {
             return $file['name'];
         } else {
             return false;
