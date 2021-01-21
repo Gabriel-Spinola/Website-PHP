@@ -1,6 +1,10 @@
 <?php
 
 class LoginManager {
+    public function __construct(
+        private DBConnectionI $DBConnection
+    ) { }
+
     # check if is logged in
     public static function isLoggedIn(): bool {
         return isset($_SESSION['logged']);
@@ -9,6 +13,7 @@ class LoginManager {
     # logout and sessions destroy
     public static function logout(): void {
         session_destroy();
+        setcookie('remember', 'true', time() - 1, '/');
 
         header('Location:' . INCLUDE_PATH_ADMIN);
         die;
@@ -24,6 +29,23 @@ class LoginManager {
         $_SESSION['position'] = $info['position'];
         $_SESSION['name'] = $info['name'];
         $_SESSION['img'] = $info['img'];
+    }
+
+    public function rememberMe(string $user, string $password): void {
+        $query = $this -> DBConnection -> connect() -> prepare(
+           "SELECT * FROM `tb_admin.users`
+            WHERE user = ? AND `password` = ?;"
+        ); 
+
+        $query -> execute([
+            $user, $password
+        ]);
+
+        $info = $query -> fetch();
+
+        if ($query -> rowCount() == 1) {
+            self :: initSession($info, $user, $password);
+        }
     }
 }
 

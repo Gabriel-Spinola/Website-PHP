@@ -86,6 +86,17 @@ section.login-box input[ type = submit ] {
     color: white;
 }
 
+section.login-box .form-group-login label {
+   padding-right: 10px;
+   margin-top: 10px;
+}
+
+section.login-box form .form-group-login:nth-of-type(2) {
+    position: relative;
+    top: 20px;
+    right: 10px;
+}
+ 
 /**Error Box**/
 
 .error-box {
@@ -372,7 +383,7 @@ form#edit-user-form .form-group {
     background: #e96d6d;
     border : 3px solid #f73333;
     color: white;
-    padding: 5px 0;
+    padding: 5px 4px;
 }
 
 /**Res**/ 
