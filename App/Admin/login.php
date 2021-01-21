@@ -1,7 +1,5 @@
 <?php 
 
-    require '../PHP/MySqlDataBase.php';
-
     $MySql = new MySqlDataBase;
     $LoginManager = new LoginManager($MySql);
 
