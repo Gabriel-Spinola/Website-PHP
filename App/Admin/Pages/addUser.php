@@ -1,6 +1,6 @@
 <?php
 
-    $AddUser = new AddUser(new MySqlDataBase);
+    $AddUser = new AddUser(new MySqlDataBase, new FilesManager);
     $AddUserValidator = new AddUserValidator(new MySqlDataBase);
 
 ?>
@@ -28,10 +28,13 @@
             } else {
                 if($image['name'] != '' && $position <= $_SESSION['position']) {
                     if ($AddUser -> isImageValid($image)) {
-                        DashBoard :: response(
-                            'success',
-                            "Suc"
-                        );
+                        if($AddUser -> addUser($user, $name, $password, $position, $image)) {
+                            $AddUser -> uploadUserImage($image);
+
+                            DashBoard :: response('success', 'User added successfully');
+                        } else {
+                            DashBoard :: response('error', 'Could not add user');
+                        }
                     } else {
                         DashBoard :: response(
                             'error',
@@ -39,7 +42,11 @@
                         );
                     }
                 } else if ($position <= $_SESSION['position']) {
-                    echo 'a';
+                    DashBoard :: detailResponse(
+                        $AddUser -> addUser($user, $name, $password, $position, $image),
+                        "User added successfully",
+                        "Could not add user"
+                    );
                 } else {
                     die;
                 }
