@@ -7,7 +7,8 @@ abstract class ImageValidator {
 
         return (
             $img['type'] == 'image/jpeg' || $img['type'] == 'image/jpg' ||
-            $img['type'] == 'image/png' && $size < 300
+            $img['type'] == 'image/png' || $img['type'] == 'image/jfif' && 
+            $size < 300
         );
     }
 }

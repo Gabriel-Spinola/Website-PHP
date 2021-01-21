@@ -2,7 +2,10 @@
 
     $UserStatsManager = new UserStatsManager(new MySqlDataBase);
     $VisitsManager = new VisitsManager(new MySqlDataBase);
+    $Admin = new Admin(new MySqlDataBase);
+
     $onlineUsers = $UserStatsManager -> getOnlineUsersList();
+    $dashboardUsers = $Admin -> getDashboardUsers();
 
 ?>
 
@@ -45,7 +48,41 @@
     
     <div class="stats-box">
 
-        <h2><i class="fa fa-user" aria-hidden="true"></i> DashBoard - <?php print COMPANY_NAME ?></h2>
+        <h2><i class="fa fa-user" aria-hidden="true"></i> DashBoard Users</h2>
+
+        <table class="users-table">
+
+            <thead class="col">
+
+                <th>Name</th>
+                <th>Position</th>
+
+            </thead>
+
+            <?php foreach($dashboardUsers as $key => $row): ?>
+
+                <tbody class="col">
+
+                    <td><?php print $row['name'] ?></td>
+
+                    <!--?convert the date/time method?-->
+                    <td><?php print Admin :: getPosition($row['position']) ?></td>
+
+                </tbody>
+
+            <?php endforeach ?>
+
+        </table>
+
+    </div><!--stats-box-->
+
+</section><!--content-box-->
+
+<section class="content-box left w100">
+    
+    <div class="stats-box">
+
+        <h2><i class="fa fa-user" aria-hidden="true"></i> Online Users info</h2>
 
         <table class="users-table">
 

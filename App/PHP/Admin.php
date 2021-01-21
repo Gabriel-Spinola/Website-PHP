@@ -96,7 +96,10 @@ class DashBoard {
 }
 
 class Admin {
-    # Get data from database
+    public function __construct(
+        private DBConnectionI $DBConnection,
+    ) { }
+
     public static function getPosition(int $positionId): string {
         return POSITIONS[$positionId];
     }
@@ -143,5 +146,15 @@ class Admin {
 
             default: return true;
         }
+    }
+
+    public function getDashboardUsers() {
+        $query = $this -> DBConnection -> connect() -> prepare(
+            "SELECT `name`,  `position` FROM `tb_admin.users`;"
+        );
+
+        $query -> execute();
+
+        return $query -> fetchAll();
     }
 } 
