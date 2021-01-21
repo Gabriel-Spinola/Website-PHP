@@ -50,6 +50,4 @@
 		include 'PHP/' . $class . '.php';
 	};
 
-	spl_autoload_register($autoload);
-
 ?>
