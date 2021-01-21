@@ -10,7 +10,7 @@
         $LoginManager -> rememberMe($user, $password);
 
         header('Location: ' . INCLUDE_PATH_ADMIN);
-        die; 
+        die;
     }
 
 ?>
