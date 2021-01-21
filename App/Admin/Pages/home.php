@@ -48,7 +48,7 @@
     
     <div class="stats-box">
 
-        <h2><i class="fa fa-user" aria-hidden="true"></i> DashBoard Users</h2>
+        <h2><i class="fa fa-archive" aria-hidden="true"></i> DashBoard Users</h2>
 
         <table class="users-table">
 

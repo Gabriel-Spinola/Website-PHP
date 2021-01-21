@@ -69,7 +69,10 @@
     <div class="menu-items">
 
         <h2>Main Page Management</h2>
-        <a <?php echo selectedItem('addTestimonials') ?> href="">Add Testimonials</a>
+        <a <?php
+            echo selectedItem('addTestimonials') 
+            ?> href="<?php echo INCLUDE_PATH_ADMIN ?>addTestimonials">Add Testimonials
+        </a>
         <a <?php echo selectedItem('addServices') ?> href="">Add Services</a>
         <a <?php echo selectedItem('addSlides') ?> href="">Add Slides</a>
         <a <?php echo selectedItem('listTestimonials') ?> href="">List Testimonials</a>

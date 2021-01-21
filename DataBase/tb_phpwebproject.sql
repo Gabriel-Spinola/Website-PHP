@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 14, 2021 at 11:10 PM
+-- Generation Time: Jan 21, 2021 at 08:20 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.0
 
@@ -41,7 +41,11 @@ CREATE TABLE `tb_admin.users` (
 --
 
 INSERT INTO `tb_admin.users` (`id`, `user`, `password`, `img`, `name`, `position`) VALUES
-(1, 'Admin', 'Admin', 'foto.png', 'Gabriel S. Mendes', 2);
+(1, 'Admin', 'Admin', 'download.jfif', 'Gabriel S. Mendes', 2),
+(3, 'Tester', 'Tester', '', 'Tester T. Tester', 1),
+(4, 'Tester2', 'Tester2', 'foto.png', 'Tester2 T2. Tester2', 0),
+(5, 'Tester3', 'Tester3', 'foto.png', 'Tester3 T3. Tester3', 1),
+(6, 'Tester4', 'Tester4', '', 'Tester4 T4. Tester4', 2);
 
 -- --------------------------------------------------------
 
@@ -52,8 +56,20 @@ INSERT INTO `tb_admin.users` (`id`, `user`, `password`, `img`, `name`, `position
 CREATE TABLE `tb_admin.users_online` (
   `id` int(11) NOT NULL,
   `ip` varchar(255) NOT NULL,
-  `last_action` datetime NOT NULL
+  `last_action` datetime NOT NULL,
+  `token` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tb_admin.users_online`
+--
+
+INSERT INTO `tb_admin.users_online` (`id`, `ip`, `last_action`, `token`) VALUES
+(13, '::1', '2021-01-21 16:08:26', '6009d12ad2d11'),
+(14, '::1', '2021-01-21 16:08:56', '6009d143af841'),
+(15, '::1', '2021-01-21 16:09:08', '6009d1547a04e'),
+(16, '::1', '2021-01-21 16:09:39', '6009d173c90cb'),
+(17, '::1', '2021-01-21 16:09:55', '6009d18347d55');
 
 -- --------------------------------------------------------
 
@@ -66,6 +82,22 @@ CREATE TABLE `tb_admin.visits` (
   `ip` varchar(255) NOT NULL,
   `date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tb_admin.visits`
+--
+
+INSERT INTO `tb_admin.visits` (`id`, `ip`, `date`) VALUES
+(1, '::1', '2021-01-18'),
+(3, '::1', '2021-01-18'),
+(4, '::1', '2021-01-17'),
+(5, '::1', '2021-01-19'),
+(6, '::1', '2021-01-21'),
+(7, '::1', '2021-01-21'),
+(8, '::1', '2021-01-21'),
+(9, '::1', '2021-01-21'),
+(10, '::1', '2021-01-21'),
+(11, '::1', '2021-01-21');
 
 --
 -- Indexes for dumped tables
@@ -97,19 +129,19 @@ ALTER TABLE `tb_admin.visits`
 -- AUTO_INCREMENT for table `tb_admin.users`
 --
 ALTER TABLE `tb_admin.users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `tb_admin.users_online`
 --
 ALTER TABLE `tb_admin.users_online`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `tb_admin.visits`
 --
 ALTER TABLE `tb_admin.visits`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
