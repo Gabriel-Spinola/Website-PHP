@@ -104,7 +104,7 @@ class Admin {
         return POSITIONS[$positionId];
     }
 
-    public static function checkPermission() {
+    public static function checkPermission(): bool {
         $url = @$_GET['url'];
 
         switch ($url) {
@@ -148,7 +148,7 @@ class Admin {
         }
     }
 
-    public function getDashboardUsers() {
+    public function getDashboardUsers(): array {
         $query = $this -> DBConnection -> connect() -> prepare(
             "SELECT `name`,  `position` FROM `tb_admin.users`;"
         );
