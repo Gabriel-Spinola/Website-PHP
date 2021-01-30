@@ -18,7 +18,7 @@ function initialize() {
 	map = new google.maps.Map(document.getElementById("map"), mapProp)
 }
 
-function addMarker(lat, long, icon, content, showInfoWindow, openInfoWindow){
+function addMarker(lat, long, icon, content, showInfoWindow, openInfoWindow) {
 	var myLatLng = {
 		lat: lat,
 		lng: long
