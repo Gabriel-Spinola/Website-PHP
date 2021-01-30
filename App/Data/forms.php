@@ -1,4 +1,4 @@
-<?php
+s<?php
 
 include '../config.php';
 
