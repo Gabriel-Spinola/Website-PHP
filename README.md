@@ -5,7 +5,7 @@
   
   The front-end is part of the Danki Code course.
   All the code is free to use and modify. 
-  If you have a tip I would be very grateful to receive it, especially for my English.
+  If you have some tip I would be very grateful to receive it, especially for my English.
 
 <hr>
 
