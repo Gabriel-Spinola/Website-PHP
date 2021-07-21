@@ -3,9 +3,7 @@
 ### About the Project:
   A Website created with PHP and jQuery.
   
-  The front-end is part of the Danki Code course.
-  All the code is free to use and modify. 
-  If you have some tip I would be very grateful to receive it, especially for my English.
+The front-end is part of the Danki Code course. If you have some feedback, I would be very grateful to receive them, especially for my English.
 
 <hr>
 
