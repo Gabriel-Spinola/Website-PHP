@@ -45,9 +45,6 @@
 
 		<div class="w50 left">
 
-			<!--placeholder img-->
-			<img class="right" style="border: 1px solid black" src="<?php echo INCLUDE_PATH ?>images/foto.png">
-
 		</div><!--w50 left-->
 
 		<div class="clear"></div><!--clear-->

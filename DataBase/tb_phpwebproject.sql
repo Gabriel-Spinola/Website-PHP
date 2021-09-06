@@ -43,8 +43,6 @@ CREATE TABLE `tb_admin.users` (
 INSERT INTO `tb_admin.users` (`id`, `user`, `password`, `img`, `name`, `position`) VALUES
 (1, 'Admin', 'Admin', 'download.jfif', 'Gabriel S. Mendes', 2),
 (3, 'Tester', 'Tester', '', 'Tester T. Tester', 1),
-(4, 'Tester2', 'Tester2', 'foto.png', 'Tester2 T2. Tester2', 0),
-(5, 'Tester3', 'Tester3', 'foto.png', 'Tester3 T3. Tester3', 1),
 (6, 'Tester4', 'Tester4', '', 'Tester4 T4. Tester4', 2);
 
 -- --------------------------------------------------------
