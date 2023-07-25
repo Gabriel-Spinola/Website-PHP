@@ -1,27 +1,27 @@
 # WebSite With PHP
 
 ### About the Project:
-  A Website created with PHP and jQuery.
-  
-The front-end is part of the Danki Code course. If you have some feedback, I would be very grateful to receive them, especially for my English.
+This project involves creating a website using PHP and jQuery. The front-end design is based on the Danki Code course.
 
 <hr>
 
-### How to Run in Your Pc:
-  First, you go to [config.php](https://github.com/Gabriel-Spinola/Website-PHP/blob/main/App/config.php) and in the const "INCLUDE_PATH" you put your path to the project.<br>
-  Also, you'll need the [jQuery library](https://jquery.com/), the [Google Maps API](https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyDHPNQxozOzQSZ-djvWGOBUsHkBUoT_qH4),
-  the [MySql(phpMyAdmin)](https://github.com/Gabriel-Spinola/Website-PHP/blob/main/DataBase/tb_phpwebproject.sql) Database, and the [PHPMailer](https://github.com/PHPMailer/PHPMailer).
-  
-  To access the Dashboard, you will need to write "Admin" in the URL and "admin" in the username and password.
+### How to Run on Your PC:
+To run this project on your PC, follow these steps:
+1. Open [config.php](https://github.com/Gabriel-Spinola/Website-PHP/blob/main/App/config.php) and set the "INCLUDE_PATH" constant to your project's path.
+2. Ensure you have the following dependencies:
+   - [jQuery library](https://jquery.com/)
+   - [Google Maps API](https://maps.googleapis.com/maps/api/js?v=3.exp&key=YOUR_API_KEY)
+   - [MySQL (phpMyAdmin) Database](https://github.com/Gabriel-Spinola/Website-PHP/blob/main/DataBase/tb_phpwebproject.sql)
+   - [PHPMailer](https://github.com/PHPMailer/PHPMailer)
+
+To access the Dashboard, go to the URL and use "Admin" as the username and "admin" as the password.
 
 <hr>
 
 ### Preview
 
- __**Main Page**__
-<br>
-<img src="https://github.com/Gabriel-Spinola/Website-PHP/blob/main/App/images/print%20main.png">
+**Main Page**
+![Main Page Preview](https://github.com/Gabriel-Spinola/Website-PHP/blob/main/App/images/print%20main.png)
 
-__**Contact Page**__
-<br>
-<img src="https://github.com/Gabriel-Spinola/Website-PHP/blob/main/App/images/print%20contact.png">
+**Contact Page**
+![Contact Page Preview](https://github.com/Gabriel-Spinola/Website-PHP/blob/main/App/images/print%20contact.png)
